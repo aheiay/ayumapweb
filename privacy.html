@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Ayumap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:      #f5f0e8;
+  --paper-dk:   #ede7d9;
+  --paper-lt:   #faf7f1;
+  --ink:        #1e1a14;
+  --ink-md:     #4a4032;
+  --ink-lt:     #8a7d6a;
+  --rust:       #F97316;
+  --cream:      #faf7f0;
+  --border:     rgba(30,26,20,0.11);
+  --border-md:  rgba(30,26,20,0.22);
+  --forest-deep: #173A2E;
+  --forest-deep-dk: #0f2a20;
+  --pine:       #205433;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Karla', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  padding: 20px 52px;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(245,240,232,0.93);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-md);
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; font-weight: 700; font-style: italic;
+  color: var(--ink); text-decoration: none; letter-spacing: -0.01em;
+}
+.nav-logo span {
+  display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--pine); margin-left: 3px; vertical-align: middle;
+  position: relative; top: -2px;
+}
+.nav-back {
+  font-size: 0.76rem; letter-spacing: 0.08em;
+  color: var(--ink-lt); text-decoration: none; transition: color 0.2s;
+}
+.nav-back:hover { color: var(--rust); }
+
+/* CONTENT */
+.priv-wrap {
+  max-width: 740px; margin: 0 auto;
+  padding: 120px 52px 96px;
+}
+
+.priv-kicker {
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--rust); margin-bottom: 18px; display: block;
+}
+
+.priv-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15;
+  color: var(--ink); margin-bottom: 10px;
+}
+.priv-title em { font-style: italic; color: var(--rust); font-weight: 400; }
+
+.priv-updated {
+  font-family: 'Lora', serif; font-style: italic;
+  font-size: 0.88rem; color: var(--ink-lt); margin-bottom: 52px;
+}
+
+.priv-intro {
+  font-family: 'Lora', serif; font-size: 1.08rem; line-height: 1.82;
+  color: var(--ink-md); margin-bottom: 52px;
+  padding: 28px 32px; background: var(--paper-lt);
+  border-left: 3px solid var(--rust); border-radius: 0 8px 8px 0;
+}
+
+.priv-section { margin-bottom: 44px; }
+
+.priv-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 700; color: var(--ink);
+  margin-bottom: 14px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-md);
+}
+
+.priv-section p {
+  font-family: 'Lora', serif; font-size: 1.02rem; line-height: 1.8;
+  color: var(--ink-md); margin-bottom: 14px;
+}
+
+.priv-section ul {
+  list-style: none; margin: 10px 0 14px 0;
+}
+
+.priv-section ul li {
+  font-family: 'Lora', serif; font-size: 1.0rem; line-height: 1.75;
+  color: var(--ink-md); padding: 6px 0 6px 20px; position: relative;
+}
+.priv-section ul li::before {
+  content: '·'; position: absolute; left: 6px; color: var(--rust); font-size: 1.2rem; line-height: 1.4;
+}
+
+.priv-section strong { color: var(--ink); font-weight: 600; }
+
+.priv-highlight {
+  background: var(--forest-deep); color: var(--cream);
+  border-radius: 12px; padding: 28px 32px; margin: 44px 0;
+}
+.priv-highlight h3 {
+  font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700;
+  color: var(--cream); margin-bottom: 12px;
+}
+.priv-highlight p {
+  font-family: 'Lora', serif; font-size: 1.0rem; line-height: 1.78;
+  color: rgba(245,240,232,0.68); margin-bottom: 0;
+}
+
+.priv-contact {
+  background: var(--paper-dk); border: 1px solid var(--border-md);
+  border-radius: 12px; padding: 28px 32px; margin-top: 52px; text-align: center;
+}
+.priv-contact p {
+  font-family: 'Lora', serif; font-size: 1.0rem; line-height: 1.75; color: var(--ink-md); margin-bottom: 12px;
+}
+.priv-contact a {
+  color: var(--rust); text-decoration: none; font-weight: 500;
+}
+.priv-contact a:hover { text-decoration: underline; }
+
+/* FOOTER */
+footer { background: var(--forest-deep-dk); color: var(--cream); padding: 40px 52px 28px; }
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 28px; flex-wrap: wrap; gap: 24px;
+}
+.footer-logo {
+  font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700;
+  font-style: italic; color: var(--paper); margin-bottom: 6px;
+}
+.footer-tagline { font-family: 'Lora', serif; font-style: italic; font-size: 0.83rem; color: rgba(245,240,232,0.35); }
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { font-size: 0.78rem; letter-spacing: 0.07em; color: rgba(245,240,232,0.38); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--rust); }
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto; padding-top: 20px;
+  border-top: 1px solid rgba(245,240,232,0.1);
+  font-size: 0.72rem; color: rgba(245,240,232,0.25);
+}
+
+@media (max-width: 900px) {
+  nav { padding: 15px 22px; }
+  .priv-wrap { padding: 100px 22px 64px; }
+  footer { padding: 32px 22px 22px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Ayumap<span></span></a>
+  <a class="nav-back" href="index.html">← Back to home</a>
+</nav>
+
+<div class="priv-wrap">
+
+  <span class="priv-kicker">Legal</span>
+  <h1 class="priv-title">Privacy <em>Policy</em></h1>
+  <p class="priv-updated">Last updated: May 2026</p>
+
+  <p class="priv-intro">
+    Ayumap is built on a single principle: <strong>your journeys belong only to you.</strong> This policy explains, in plain language, what data the app handles, where it lives, and why you can trust that your personal geography stays private.
+  </p>
+
+  <div class="priv-highlight">
+    <h3>The short version</h3>
+    <p>Your GPS tracks, journal notes, and walk history are stored exclusively in your own private iCloud container. The developer has no access to this data — ever. No account is required. No email is collected. No personal data is sent to any server.</p>
+  </div>
+
+  <div class="priv-section">
+    <h2>What data Ayumap collects</h2>
+    <p>Ayumap keeps all personal data on your device and in your private iCloud container. The following data is used by the app:</p>
+    <ul>
+      <li><strong>GPS location data</strong> — recorded during active walks and imported from Apple Health or GPX files. Stored locally and in your private iCloud container only.</li>
+      <li><strong>Walk metadata</strong> — distance, duration, date, and route geometry for each recorded journey.</li>
+      <li><strong>Journal notes</strong> — text you write about a walk. Stored privately in iCloud. Never read or transmitted by Ayumap.</li>
+      <li><strong>Photo location tags</strong> — if you enable the photo layer, Ayumap reads GPS coordinates embedded in your photos via PhotoKit. No images are copied, uploaded, or stored by the app.</li>
+      <li><strong>Apple Health data</strong> — walk and hike workouts are read from HealthKit to populate your heatmap. This data is never transmitted outside your device or iCloud container.</li>
+    </ul>
+  </div>
+
+  <div class="priv-section">
+    <h2>iCloud &amp; data storage</h2>
+    <p>All personal data is stored in a <strong>private iCloud container</strong> tied to your Apple ID. This means:</p>
+    <ul>
+      <li>Only you can access this data — not the developer, not Apple (beyond standard iCloud infrastructure).</li>
+      <li>Data syncs automatically across your own devices without passing through any Ayumap server.</li>
+      <li>Deleting the app or your iCloud data removes everything completely.</li>
+    </ul>
+    <p>Ayumap does not operate its own user database. There is no server-side account, no login, and no email tied to your usage.</p>
+  </div>
+
+  <div class="priv-section">
+    <h2>Community heatmap (optional)</h2>
+    <p>Ayumap includes an optional community heatmap that shows anonymised walking density from all users. If you participate:</p>
+    <ul>
+      <li>Only <strong>geographic grid cell density</strong> is contributed — not your individual route, not your identity.</li>
+      <li>Contributions are sent using an <strong>anonymous device token only</strong>. No name, email, Apple ID, or personal identifier is ever associated with community data.</li>
+      <li>The community feature can be disabled at any time in Settings.</li>
+    </ul>
+    <p>Community data is stored in Ayumap's Firebase infrastructure (Google Cloud, Europe West 2 region) in fully anonymised form.</p>
+  </div>
+
+  <div class="priv-section">
+    <h2>Location permissions</h2>
+    <p>Ayumap requests location access only as needed:</p>
+    <ul>
+      <li><strong>"While Using"</strong> — requested for manual walk recording in the foreground.</li>
+      <li><strong>"Always On"</strong> — only requested if you explicitly enable the background recorder in Settings. This allows walks to be recorded while the app is in the background.</li>
+    </ul>
+    <p>You can revoke location permissions at any time in iOS Settings → Privacy → Location Services → Ayumap. Revoking will prevent new walks from being recorded but will not affect existing data.</p>
+  </div>
+
+  <div class="priv-section">
+    <h2>HealthKit</h2>
+    <p>Ayumap reads walk and hike workouts from Apple Health to build your heatmap history. The app never writes to HealthKit and never shares Health data with third parties. HealthKit data is governed by Apple's HealthKit framework restrictions — it cannot be used for advertising or sold to data brokers.</p>
+  </div>
+
+  <div class="priv-section">
+    <h2>Analytics &amp; advertising</h2>
+    <p>Ayumap contains <strong>no advertising</strong> and no third-party analytics SDKs. No tracking pixels, no ad networks, no App Tracking Transparency prompts. The app does not track you across other apps or websites.</p>
+    <p>Basic, privacy-preserving crash reporting may be used via Apple's built-in mechanisms, subject to your iOS privacy settings.</p>
+  </div>
+
+  <div class="priv-section">
+    <h2>Data retention &amp; deletion</h2>
+    <p>Your data lives in your iCloud container. You control it entirely:</p>
+    <ul>
+      <li>Delete individual walks or journal entries from within the app at any time.</li>
+      <li>Delete all app data by removing Ayumap from your device and clearing its iCloud data in iOS Settings → [Your name] → iCloud → Manage Storage.</li>
+    </ul>
+    <p>Anonymised community heatmap contributions cannot be individually deleted because they are not tied to your identity in any way.</p>
+  </div>
+
+  <div class="priv-section">
+    <h2>Children's privacy</h2>
+    <p>Ayumap is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided information, please contact us at <a href="mailto:info@gormakuma.com" style="color:var(--rust);">info@gormakuma.com</a> and we will address it promptly.</p>
+  </div>
+
+  <div class="priv-section">
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes materially, the updated version will be posted here with a revised date. Continued use of Ayumap after changes constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <div class="priv-contact">
+    <p>Questions about privacy or data? We're happy to help.</p>
+    <p><a href="mailto:info@gormakuma.com">info@gormakuma.com</a></p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Ayumap</div>
+      <div class="footer-tagline">Your journeys, only yours.</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:info@gormakuma.com">Support &amp; Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Ayumap. A personal map shaped by your journeys.</div>
+</footer>
+
+</body>
+</html>
