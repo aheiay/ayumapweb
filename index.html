@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Ayumap — Your Journeys, Only Yours.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,7 +60,7 @@ body::before {
 /* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 500;
-  padding: 20px 52px;
+  padding: calc(20px + env(safe-area-inset-top)) 52px 20px;
   display: flex; justify-content: space-between; align-items: center;
   background: rgba(245,240,232,0.93);
   backdrop-filter: blur(12px);
@@ -544,7 +544,8 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   .badge-frame { width: 260px; }
   .section-head { grid-template-columns: 1fr; gap: 8px; }
   .section-num { display: none; }
-  .philosophy { padding: 52px 22px 52px; }
+  .philosophy { padding: 36px 22px 44px; }
+  .section-head { margin-bottom: 28px; }
   .features-section { padding: 52px 22px; }
   .privacy-section { padding: 52px 22px; }
   .card-grid { grid-template-columns: 1fr; }
@@ -589,7 +590,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
       <span class="kicker-dash"></span>
       <span class="kicker-text">iOS App — Coming Soon</span>
     </div>
-    <h1 class="hero-title">Your journeys,<br><em>only yours.</em></h1>
+    <h1 class="hero-title">Your journeys,<br><em>Only Yours.</em></h1>
     <p class="hero-body">A private walking memory map for people who want to remember meaningful journeys — without social pressure, performance tracking, or digital noise.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="#pricing">
@@ -1034,12 +1035,12 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
       <p class="features-dek">Whether it is a travel memory, a mountain trail, a familiar walk near home, or a city exploration — Ayumap quietly collects it all. Import once, record going forward, revisit whenever.</p>
       <div class="feat-label">What's included</div>
       <ul class="feat-list">
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>All-time heatmap — always free</strong>Your full journey map, from the very first walk. Never paywalled.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Apple Health sync</strong>Import every past walk automatically. No manual work needed.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Batch GPX import</strong>Bring in years of data from Komoot, AllTrails, Garmin, or Strava at once.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Quiet background recorder</strong>Walks and meaningful journeys only. Unimportant short trips can be filtered out automatically.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Reflective journal</strong>A calm space to write a few words about a journey. Private, always.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>iCloud sync — free, unlimited</strong>Everything syncs across your devices privately. No server sees your data.</div></li>
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Heatmap — free for 1 country</strong>Start with one country of your choice. Upgrade to unlock the full world map and all-time history.</div></li>
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Apple Health sync</strong>Import past walks automatically from Health. No manual work needed.</div></li>
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>GPX import</strong>Bring in data from Komoot, AllTrails, Garmin, or Strava.</div></li>
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Quiet background recorder</strong>Walks and meaningful journeys only. Short unimportant trips filtered out automatically.</div></li>
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Reflective journal</strong>A calm space to write a few words about each journey. Private, always.</div></li>
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>iCloud sync</strong>Everything syncs privately across your devices. No server sees your data.</div></li>
       </ul>
     </div>
     <div>
@@ -1077,8 +1078,8 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
       <div class="pricing-kicker-row">
         <span class="pk-dash"></span><span class="pk-text">Simple &amp; honest</span><span class="pk-dash"></span>
       </div>
-      <h2 class="pricing-title">Your memory map is <em>always free.</em></h2>
-      <p class="pricing-sub">The core experience — your full heatmap, your journeys, your reflections — costs nothing. Upgrade only when you want more depth.</p>
+      <h2 class="pricing-title">Start free. <em>Unlock the world.</em></h2>
+      <p class="pricing-sub">Explore your home country for free, with the last 30 days of history. Upgrade to unlock your full all-time map and every country you've ever walked.</p>
     </div>
     <div class="tiers">
       <div class="tier">
@@ -1087,17 +1088,16 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
         <p class="tier-price">No cost. No credit card. No catch.</p>
         <div class="tier-div"></div>
         <ul class="tier-items">
-          <li class="ti"><span class="ti-mark">✓</span> Full all-time heatmap</li>
+          <li class="ti"><span class="ti-mark">✓</span> Heatmap — 1 country of your choice</li>
+          <li class="ti"><span class="ti-mark">✓</span> Last 30 days of walk history</li>
           <li class="ti"><span class="ti-mark">✓</span> Apple Health sync</li>
-          <li class="ti"><span class="ti-mark">✓</span> Batch GPX import</li>
+          <li class="ti"><span class="ti-mark">✓</span> GPX import</li>
           <li class="ti"><span class="ti-mark">✓</span> Background recorder</li>
           <li class="ti"><span class="ti-mark">✓</span> Daily journal + notes</li>
-          <li class="ti"><span class="ti-mark">✓</span> Snapshot export (all styles)</li>
-          <li class="ti"><span class="ti-mark">✓</span> iCloud backup (unlimited)</li>
-          <li class="ti"><span class="ti-mark">✓</span> 1 country of your choice</li>
-          <li class="ti"><span class="ti-mark">✓</span> Distance milestone badges</li>
-          <li class="ti dim"><span class="ti-mark">—</span> Path lines (3-week history only)</li>
-          <li class="ti dim"><span class="ti-mark">—</span> Stats at country level only</li>
+          <li class="ti"><span class="ti-mark">✓</span> iCloud backup</li>
+          <li class="ti dim"><span class="ti-mark">—</span> Full all-time history</li>
+          <li class="ti dim"><span class="ti-mark">—</span> World map &amp; all countries</li>
+          <li class="ti dim"><span class="ti-mark">—</span> Path lines beyond 30 days</li>
         </ul>
         <div class="tier-cta-wrap"><a href="#" class="tier-btn">Download Free</a></div>
       </div>
@@ -1137,7 +1137,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   <div class="footer-inner">
     <div>
       <div class="footer-logo">Ayumap</div>
-      <div class="footer-tagline">Your journeys, only yours.</div>
+      <div class="footer-tagline">Your Journeys, Only Yours.</div>
     </div>
     <div class="footer-links">
       <a href="privacy.html">Privacy Policy</a>
