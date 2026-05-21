@@ -218,7 +218,7 @@ nav {
 .pull-attr { font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,240,232,0.45); }
 
 /* ── PHILOSOPHY ── */
-.philosophy { max-width: 1200px; margin: 0 auto; padding: 96px 52px; }
+.philosophy { max-width: 1200px; margin: 0 auto; padding: 72px 52px; }
 
 .section-head {
   display: grid; grid-template-columns: auto 1fr; gap: 50px;
@@ -263,7 +263,7 @@ nav {
 .c-body { font-size: 0.87rem; line-height: 1.65; color: var(--ink-md); }
 
 /* ── FEATURES ── */
-.features-section { background: var(--forest-deep); border-top: 1px solid rgba(23,58,46,0.4); padding: 96px 52px; }
+.features-section { background: var(--forest-deep); border-top: 1px solid rgba(23,58,46,0.4); padding: 72px 52px; }
 .features-inner {
   max-width: 1200px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr; gap: 86px; align-items: start;
@@ -371,7 +371,7 @@ nav {
 
 /* ── PRIVACY ── */
 .privacy-section {
-  max-width: 1200px; margin: 0 auto; padding: 96px 52px;
+  max-width: 1200px; margin: 0 auto; padding: 72px 52px;
   display: grid; grid-template-columns: 2fr 3fr; gap: 76px; align-items: center;
 }
 .priv-title {
@@ -392,7 +392,7 @@ nav {
 .pp-text strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 2px; }
 
 /* ── PRICING ── */
-.pricing-section { background: var(--paper-dk); border-top: 1px solid var(--border-md); padding: 96px 52px; }
+.pricing-section { background: var(--paper-dk); border-top: 1px solid var(--border-md); padding: 72px 52px; }
 .pricing-inner { max-width: 1200px; margin: 0 auto; }
 .pricing-hed { text-align: center; margin-bottom: 52px; }
 .pricing-kicker-row { display: flex; align-items: center; gap: 12px; justify-content: center; margin-bottom: 16px; }
@@ -538,21 +538,19 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  nav { padding: 15px 22px; }
+  nav { padding: calc(15px + env(safe-area-inset-top)) 22px 15px; }
   .hero, .features-inner, .privacy-section { grid-template-columns: 1fr; gap: 44px; }
   .hero { min-height: unset; padding: 108px 22px 56px; }
   .badge-frame { width: 260px; }
   .section-head { grid-template-columns: 1fr; gap: 8px; }
   .section-num { display: none; }
-  .philosophy { padding: 36px 22px 44px; }
-  .section-head { margin-bottom: 28px; }
-  .features-section { padding: 52px 22px; }
-  .privacy-section { padding: 52px 22px; }
+  .section-head { margin-bottom: 20px; }
   .card-grid { grid-template-columns: 1fr; }
   .c-card { border-right: none; border-bottom: 1px solid var(--border-md); }
   .c-card:last-child { border-bottom: none; }
   .tiers { grid-template-columns: 1fr; }
-  .philosophy,.pricing-section,.features-section,.privacy-section,.badges-section,footer { padding-left: 22px; padding-right: 22px; }
+  .philosophy,.pricing-section,.features-section,.privacy-section,.badges-section { padding: 44px 22px; }
+  footer { padding-left: 22px; padding-right: 22px; }
   .pull-section { padding: 60px 22px; }
   .divider { padding: 0 22px; }
 }
