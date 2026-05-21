@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Support — Ayumap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:      #f5f0e8;
+  --paper-dk:   #ede7d9;
+  --paper-lt:   #faf7f1;
+  --ink:        #1e1a14;
+  --ink-md:     #4a4032;
+  --ink-lt:     #8a7d6a;
+  --rust:       #F97316;
+  --cream:      #faf7f0;
+  --border:     rgba(30,26,20,0.11);
+  --border-md:  rgba(30,26,20,0.22);
+  --forest-deep: #173A2E;
+  --forest-deep-dk: #0f2a20;
+  --pine:       #205433;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: 'Karla', sans-serif; font-weight: 300;
+  overflow-x: hidden; -webkit-font-smoothing: antialiased;
+}
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  padding: calc(20px + env(safe-area-inset-top)) 52px 20px;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(245,240,232,0.93); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-md);
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif; font-size: 1.2rem;
+  font-weight: 700; font-style: italic; color: var(--ink); text-decoration: none;
+}
+.nav-logo span {
+  display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--pine); margin-left: 3px; vertical-align: middle; position: relative; top: -2px;
+}
+.nav-back { font-size: 0.76rem; color: var(--ink-lt); text-decoration: none; transition: color 0.2s; }
+.nav-back:hover { color: var(--rust); }
+
+.wrap { max-width: 700px; margin: 0 auto; padding: 120px 52px 96px; }
+
+.kicker {
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--rust); margin-bottom: 18px; display: block;
+}
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15;
+  color: var(--ink); margin-bottom: 12px;
+}
+.page-title em { font-style: italic; color: var(--rust); font-weight: 400; }
+.page-sub {
+  font-family: 'Lora', serif; font-size: 1.08rem; line-height: 1.78;
+  color: var(--ink-md); margin-bottom: 56px;
+}
+
+/* FAQ */
+.faq { margin-bottom: 56px; }
+.faq-item {
+  border-bottom: 1px solid var(--border-md); padding: 22px 0;
+}
+.faq-item:first-child { border-top: 1px solid var(--border-md); }
+.faq-q {
+  font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700;
+  color: var(--ink); margin-bottom: 10px;
+}
+.faq-a {
+  font-family: 'Lora', serif; font-size: 1.0rem; line-height: 1.78; color: var(--ink-md);
+}
+.faq-a a { color: var(--rust); text-decoration: none; }
+.faq-a a:hover { text-decoration: underline; }
+
+/* Contact card */
+.contact-card {
+  background: var(--forest-deep); border-radius: 20px;
+  padding: 40px; text-align: center;
+}
+.contact-card h2 {
+  font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700;
+  color: var(--cream); margin-bottom: 12px;
+}
+.contact-card p {
+  font-family: 'Lora', serif; font-size: 1.02rem; line-height: 1.75;
+  color: rgba(245,240,232,0.6); margin-bottom: 28px;
+}
+.contact-btn {
+  display: inline-block; padding: 13px 32px;
+  background: var(--rust); color: var(--cream); text-decoration: none;
+  font-size: 0.88rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  border-radius: 20px; transition: background 0.2s;
+}
+.contact-btn:hover { background: #ea6a0a; }
+
+footer {
+  background: var(--forest-deep-dk); color: var(--cream);
+  padding: 40px 52px 28px; margin-top: 96px;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 28px; flex-wrap: wrap; gap: 24px;
+}
+.footer-logo {
+  font-family: 'Playfair Display', serif; font-size: 1.2rem;
+  font-weight: 700; font-style: italic; color: var(--cream); margin-bottom: 6px;
+}
+.footer-tagline { font-family: 'Lora', serif; font-style: italic; font-size: 0.83rem; color: rgba(245,240,232,0.35); }
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a { font-size: 0.78rem; color: rgba(245,240,232,0.38); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--rust); }
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto; padding-top: 20px;
+  border-top: 1px solid rgba(245,240,232,0.1);
+  font-size: 0.72rem; color: rgba(245,240,232,0.25);
+}
+
+@media (max-width: 900px) {
+  nav { padding: calc(15px + env(safe-area-inset-top)) 22px 15px; }
+  .wrap { padding: 100px 22px 64px; }
+  footer { padding: 32px 22px 22px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Ayumap<span></span></a>
+  <a class="nav-back" href="index.html">← Back to home</a>
+</nav>
+
+<div class="wrap">
+
+  <span class="kicker">Help</span>
+  <h1 class="page-title">Support</h1>
+  <p class="page-sub">Common questions answered below. If you need anything else, just drop us an email.</p>
+
+  <div class="faq">
+
+    <div class="faq-item">
+      <p class="faq-q">How do I import my past walks from Apple Health?</p>
+      <p class="faq-a">Open Ayumap and go to the Record tab. Tap "Import from Apple Health" and grant permission when prompted. Ayumap will pull in all walks and hikes automatically. Runs are excluded by design.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">How do I import GPX files?</p>
+      <p class="faq-a">Go to the Record tab and tap "Import GPX". You can select multiple files at once from Files, iCloud Drive, or any other app that supports the share sheet. Ayumap supports both GPX and FIT formats.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Why are some short walks not showing on my map?</p>
+      <p class="faq-a">By default, Ayumap filters out walks under 45 minutes when syncing from Apple Health — to keep your map meaningful rather than cluttered with every brief trip. You can adjust this threshold in Settings.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">What is the difference between the free and paid plan?</p>
+      <p class="faq-a">The free plan gives you a full heatmap and path lines for one country of your choice — with no time limit on the map. Journal access is limited to your most recent 30 days. The paid plan unlocks worldwide map access and your full journal history across all time.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Is my data private? Who can see my walks?</p>
+      <p class="faq-a">Only you. All personal GPS data is stored in a private iCloud container tied to your Apple ID — the developer cannot access it. If you participate in the optional community heatmap, only anonymous grid density is contributed. See our <a href="privacy.html">Privacy Policy</a> for full details.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">How do I change my selected country?</p>
+      <p class="faq-a">Go to Settings and tap "Map Region". You can select a different country at any time. Your heatmap and path lines will update to show that country.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">How do I delete a walk or journal entry?</p>
+      <p class="faq-a">Open the journal entry and swipe left, or tap the entry to open it and use the delete option. Deleted entries are removed from your iCloud container permanently.</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">Will my data transfer if I get a new iPhone?</p>
+      <p class="faq-a">Yes. All data syncs via iCloud automatically. Sign in with the same Apple ID on your new device, install Ayumap, and everything will restore.</p>
+    </div>
+
+  </div>
+
+  <div class="contact-card">
+    <h2>Still need help?</h2>
+    <p>Send us an email and we'll get back to you as soon as we can.</p>
+    <a class="contact-btn" href="mailto:info@gormakuma.com">info@gormakuma.com</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Ayumap</div>
+      <div class="footer-tagline">Your Journeys, Only yours.</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:info@gormakuma.com">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Ayumap. A personal map shaped by your journeys.</div>
+</footer>
+
+</body>
+</html>
