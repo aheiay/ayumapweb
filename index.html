@@ -541,6 +541,8 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   nav { padding: calc(15px + env(safe-area-inset-top)) 22px 15px; }
   .hero, .features-inner, .privacy-section { grid-template-columns: 1fr; gap: 44px; }
   .hero { min-height: unset; padding: 108px 22px 56px; }
+  .hero-actions { flex-direction: column; align-items: center; text-align: center; }
+  .btn-primary, .btn-ghost { width: 100%; text-align: center; justify-content: center; }
   .badge-frame { width: 260px; }
   .section-head { grid-template-columns: 1fr; gap: 8px; }
   .section-num { display: none; }
@@ -714,7 +716,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
       <div class="ct-label">Goal</div>
       <div class="ct-them"><span class="ct-x">✕</span>Performance &amp; stats</div>
       <div class="ct-apple"><span class="ct-x">✕</span>Health data tracking</div>
-      <div class="ct-us"><span class="ct-check">✓</span>Memory &amp; reflection</div>
+      <div class="ct-us"><span class="ct-check">✓</span>Memory &amp; reminiscence</div>
     </div>
     <div class="ct-row">
       <div class="ct-label">Map view</div>
@@ -742,9 +744,9 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
     </div>
     <div class="ct-row">
       <div class="ct-label">Sharing</div>
-      <div class="ct-them"><span class="ct-x">✕</span>Optimised for social sharing</div>
-      <div class="ct-apple"><span class="ct-neutral">–</span>No sharing</div>
-      <div class="ct-us"><span class="ct-check">✓</span>Private by default</div>
+      <div class="ct-them"><span class="ct-x">✕</span>Push to social networks</div>
+      <div class="ct-apple"><span class="ct-neutral">–</span>Share to Health only</div>
+      <div class="ct-us"><span class="ct-check">✓</span>Map snapshot, when you choose</div>
     </div>
     <div class="ct-row">
       <div class="ct-label">Short walks</div>
