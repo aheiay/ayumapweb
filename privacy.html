@@ -133,16 +133,24 @@ nav {
 }
 
 .priv-contact {
-  background: var(--paper-dk); border: 1px solid var(--border-md);
-  border-radius: 12px; padding: 28px 32px; margin-top: 52px; text-align: center;
+  background: var(--forest-deep);
+  border-radius: 20px; padding: 40px; margin-top: 52px; text-align: center;
+}
+.priv-contact h2 {
+  font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700;
+  color: var(--cream); margin-bottom: 12px;
 }
 .priv-contact p {
-  font-family: 'Lora', serif; font-size: 1.0rem; line-height: 1.75; color: var(--ink-md); margin-bottom: 12px;
+  font-family: 'Lora', serif; font-size: 1.02rem; line-height: 1.75;
+  color: rgba(245,240,232,0.6); margin-bottom: 28px;
 }
-.priv-contact a {
-  color: var(--rust); text-decoration: none; font-weight: 500;
+.contact-btn {
+  display: inline-block; padding: 13px 32px;
+  background: var(--rust); color: var(--cream); text-decoration: none;
+  font-size: 0.88rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  border-radius: 20px; transition: background 0.2s;
 }
-.priv-contact a:hover { text-decoration: underline; }
+.contact-btn:hover { background: #ea6a0a; }
 
 /* FOOTER */
 footer { background: var(--forest-deep-dk); color: var(--cream); padding: 40px 52px 28px; }
@@ -270,8 +278,9 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 40px 5
   </div>
 
   <div class="priv-contact">
+    <h2>Still need help?</h2>
     <p>Questions about privacy or data? We're happy to help.</p>
-    <p><a href="mailto:info@gormakuma.com">info@gormakuma.com</a></p>
+    <a class="contact-btn" href="mailto:info@gormakuma.com">info@gormakuma.com</a>
   </div>
 
 </div>
@@ -280,12 +289,13 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 40px 5
   <div class="footer-inner">
     <div>
       <div class="footer-logo">Ayumap</div>
-      <div class="footer-tagline">Your journeys, only yours.</div>
+      <div class="footer-tagline">Your Journeys, Only yours.</div>
     </div>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="privacy.html">Privacy Policy</a>
-      <a href="mailto:info@gormakuma.com">Support &amp; Contact</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:info@gormakuma.com">Contact</a>
     </div>
   </div>
   <div class="footer-bottom">© 2026 Ayumap. A personal map shaped by your journeys.</div>
