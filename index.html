@@ -92,7 +92,7 @@ nav {
 
 /* ── HERO ── */
 .hero {
-  padding: 100px 52px 72px;
+  padding: 130px 52px 72px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 72px;
   align-items: center; max-width: 1200px; margin: 0 auto; min-height: auto;
 }
@@ -266,7 +266,7 @@ nav {
 .features-section { background: var(--forest-deep); border-top: 1px solid rgba(23,58,46,0.4); padding: 72px 52px; }
 .features-inner {
   max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 86px; align-items: end;
+  display: block; max-width: 700px;
 }
 .features-title {
   font-family: 'Playfair Display', serif;
@@ -568,6 +568,30 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
       radial-gradient(ellipse 28% 70% at 100% 50%, rgba(200,134,26,0.07) 0%, transparent 100%);
   }
 }
+
+/* ── JOURNEY SOURCES ── */
+.journey-section { background: var(--paper-lt); border-top: 1px solid var(--border-md); }
+.journey-inner { max-width: 1200px; margin: 0 auto; padding: 72px 52px; }
+.journey-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  margin-top: 44px; margin-bottom: 36px;
+}
+.journey-card {
+  background: var(--paper); border: 1px solid var(--border-md);
+  border-radius: 20px; padding: 28px; display: flex; gap: 18px; align-items: flex-start;
+}
+.journey-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+.journey-body strong { display: block; font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+.journey-body p { font-size: 0.95rem; line-height: 1.7; color: var(--ink-md); margin: 0; }
+.journey-footer {
+  font-family: 'Lora', serif; font-style: italic; font-size: 1.05rem;
+  color: var(--ink-lt); text-align: center; padding-top: 16px;
+  border-top: 1px solid var(--border-md);
+}
+@media (max-width: 900px) {
+  .journey-inner { padding: 44px 22px; }
+  .journey-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -674,12 +698,6 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   </div>
 </section>
 
-<!-- DIVIDER -->
-<div class="divider">
-  <span class="div-rule"></span>
-  <div class="div-dots"><div class="div-dot"></div><div class="div-dot lg"></div><div class="div-dot"></div></div>
-  <span class="div-rule"></span>
-</div>
 
 <!-- PULL QUOTE -->
 <div class="pull-section">
@@ -1043,15 +1061,51 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
         <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>iCloud sync</strong>Everything syncs privately across your devices. No server sees your data.</div></li>
       </ul>
     </div>
-    <div>
-      <div class="feat-label">Four tabs. No clutter.</div>
-      <div class="tabs-col">
-        <div class="tab-row"><div class="tab-title">🗺 Map</div><div class="tab-body">Full-screen heatmap and path lines. Stats panel slides up from the bottom. Share button top-right.</div></div>
-        <div class="tab-row"><div class="tab-title">⏺ Record</div><div class="tab-body">Start / stop, live path preview, import from Health or GPX. All data sources in one place.</div></div>
-        <div class="tab-row"><div class="tab-title">📓 Journal</div><div class="tab-body">Date-ordered private notes, each linked to that day's walk. Calm and quiet by design.</div></div>
-        <div class="tab-row"><div class="tab-title">⚙️ Settings</div><div class="tab-body">Map style, recording mode, notifications, data sources. Everything in one honest place.</div></div>
+
+  </div>
+</section>
+
+<!-- JOURNEY SOURCES -->
+<section class="journey-section">
+  <div class="journey-inner">
+    <div class="section-head">
+      <div class="section-num">03</div>
+      <div>
+        <h2 class="section-title">Not a tracking app.<br><em>A memory map.</em></h2>
+        <p class="section-dek">Ayumap is designed to sit quietly alongside the tools you already use. Your Apple Watch, Apple Health, Garmin, or Strava — they handle the tracking. Ayumap handles the remembering.</p>
       </div>
     </div>
+    <div class="journey-grid">
+      <div class="journey-card">
+        <div class="journey-icon">⌚</div>
+        <div class="journey-body">
+          <strong>Apple Watch</strong>
+          <p>The recommended way to record walks. Battery life, GPS accuracy, and background reliability are all beyond what any third-party app can match. Use your Watch — Ayumap will be waiting.</p>
+        </div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-icon">❤️</div>
+        <div class="journey-body">
+          <strong>Apple Health</strong>
+          <p>Every walk and hike already stored in Health syncs automatically into your map. Years of history can appear at once, with no manual effort.</p>
+        </div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-icon">📁</div>
+        <div class="journey-body">
+          <strong>GPX &amp; FIT import</strong>
+          <p>Bring in routes from Komoot, AllTrails, Garmin, or Strava. A journey recorded anywhere can become part of your personal map.</p>
+        </div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-icon">⏺</div>
+        <div class="journey-body">
+          <strong>In-app recorder</strong>
+          <p>For moments when you don't have your Watch — a quiet fallback. Start it, walk, forget it's running. The path will be there when you're done.</p>
+        </div>
+      </div>
+    </div>
+    <p class="journey-footer">However the journey was recorded, it ends up in the same place — your map.</p>
   </div>
 </section>
 
