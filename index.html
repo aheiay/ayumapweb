@@ -92,9 +92,9 @@ nav {
 
 /* ── HERO ── */
 .hero {
-  padding: 110px 52px 72px;
+  padding: 100px 52px 72px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 72px;
-  align-items: center; max-width: 1200px; margin: 0 auto; min-height: 92vh;
+  align-items: center; max-width: 1200px; margin: 0 auto; min-height: auto;
 }
 .hero-left { opacity: 0; animation: riseIn 0.9s ease 0.15s forwards; }
 
@@ -266,7 +266,7 @@ nav {
 .features-section { background: var(--forest-deep); border-top: 1px solid rgba(23,58,46,0.4); padding: 72px 52px; }
 .features-inner {
   max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 86px; align-items: start;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 86px; align-items: end;
 }
 .features-title {
   font-family: 'Playfair Display', serif;
@@ -1035,7 +1035,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
       <p class="features-dek">Whether it is a travel memory, a mountain trail, a familiar walk near home, or a city exploration — Ayumap quietly collects it all. Import once, record going forward, revisit whenever.</p>
       <div class="feat-label">What's included</div>
       <ul class="feat-list">
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Heatmap — 1 country, all paths, forever</strong>Your chosen country shows every path you've ever walked — no time limit on the map. Upgrade to unlock the whole world.</div></li>
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Personal heatmap</strong>Your chosen country shows every path you've ever walked — no time limit on the map. Upgrade to unlock the whole world.</div></li>
         <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Apple Health sync</strong>Import past walks automatically from Health. No manual work needed.</div></li>
         <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>GPX import</strong>Bring in data from Komoot, AllTrails, Garmin, or Strava.</div></li>
         <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Quiet background recorder</strong>Walks and meaningful journeys only. Short unimportant trips filtered out automatically.</div></li>
@@ -1060,14 +1060,13 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   <div>
     <div class="section-num" style="color:rgba(30,26,20,0.08);margin-bottom:14px;font-size:4rem;">03</div>
     <h2 class="priv-title">Private inside.<br><em>Shareable outside.</em></h2>
-    <p class="priv-dek">No account. No sign-up. No email. Your journeys live in your own private iCloud container — a quiet archive only you can access.</p>
+    <p class="priv-dek">Sign in with Apple ID — nothing extra to create or remember. Your journeys live in your own private iCloud container, a quiet archive only you can access.</p>
   </div>
   <ul class="priv-points">
-    <li class="pp"><div class="pp-icon">🔒</div><div class="pp-text"><strong>No account, no sign-up — ever</strong>Bound to your Apple ID via iCloud. Nothing to create or remember.</div></li>
+    <li class="pp"><div class="pp-icon">🔒</div><div class="pp-text"><strong>Sign in with Apple ID — nothing else</strong>No separate account, no email, no password. Your data is bound to your Apple ID via iCloud.</div></li>
     <li class="pp"><div class="pp-icon">☁️</div><div class="pp-text"><strong>Private iCloud container</strong>All personal GPS data lives in a container only you can access. The developer cannot read it.</div></li>
-    <li class="pp"><div class="pp-icon">🙈</div><div class="pp-text"><strong>Anonymous community features</strong>The optional community heatmap uses an anonymous device token only — no name, no email.</div></li>
-    <li class="pp"><div class="pp-icon">📷</div><div class="pp-text"><strong>Photos: read-only</strong>PhotoKit reads GPS coordinates from your photos. No images are copied or stored.</div></li>
-    <li class="pp"><div class="pp-icon">📍</div><div class="pp-text"><strong>Location: on request only</strong>"Always on" permission is only requested when you explicitly enable the background recorder.</div></li>
+    <li class="pp"><div class="pp-icon">🙈</div><div class="pp-text"><strong>Anonymous community features</strong>The optional community heatmap uses an anonymous device token only — no name, no email. You can turn it off anytime in Settings.</div></li>
+      <li class="pp"><div class="pp-icon">📍</div><div class="pp-text"><strong>Location: on request only</strong>"Always on" permission is only requested when you explicitly enable the background recorder.</div></li>
   </ul>
 </section>
 
@@ -1100,7 +1099,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
         <div class="tier-cta-wrap"><a href="#" class="tier-btn">Download Free</a></div>
       </div>
       <div class="tier featured">
-        <span class="tier-flag">Paid — Coming Soon</span>
+        <span class="tier-flag">Premium</span>
         <h3 class="tier-name">Pathfinder</h3>
         <p class="tier-price">Unlock your full world history</p>
         <div class="tier-div"></div>
