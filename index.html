@@ -334,12 +334,13 @@ nav {
 
 .screen-phone {
   width: 130px;
-  background: var(--forest-deep);
+  background: transparent;
   border-radius: 22px;
-  padding: 8px;
-  box-shadow: 4px 8px 24px rgba(23,58,46,0.18), 0 0 0 1px rgba(23,58,46,0.3);
+  padding: 0;
+  box-shadow: 4px 8px 24px rgba(0,0,0,0.12);
   position: relative;
   flex-shrink: 0;
+  overflow: hidden;
 }
 .screen-notch {
   position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
@@ -631,60 +632,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
       <!-- Phone mockup with map inside -->
       <div class="phone-mockup">
         <div class="phone-screen">
-          <!-- Map SVG placeholder -->
-          <svg width="100%" height="100%" viewBox="0 0 300 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Map background -->
-            <rect width="300" height="480" fill="#e8e0d0"/>
-            <!-- Grid roads -->
-            <line x1="0" y1="80"  x2="300" y2="80"  stroke="#d4c9b5" stroke-width="8"/>
-            <line x1="0" y1="160" x2="300" y2="160" stroke="#d4c9b5" stroke-width="6"/>
-            <line x1="0" y1="240" x2="300" y2="240" stroke="#d4c9b5" stroke-width="8"/>
-            <line x1="0" y1="320" x2="300" y2="320" stroke="#d4c9b5" stroke-width="6"/>
-            <line x1="0" y1="400" x2="300" y2="400" stroke="#d4c9b5" stroke-width="6"/>
-            <line x1="60"  y1="0" x2="60"  y2="480" stroke="#d4c9b5" stroke-width="6"/>
-            <line x1="140" y1="0" x2="140" y2="480" stroke="#d4c9b5" stroke-width="8"/>
-            <line x1="220" y1="0" x2="220" y2="480" stroke="#d4c9b5" stroke-width="6"/>
-            <!-- Diagonal street -->
-            <line x1="0" y1="300" x2="180" y2="0"   stroke="#d4c9b5" stroke-width="5"/>
-            <line x1="120" y1="480" x2="300" y2="180" stroke="#d4c9b5" stroke-width="5"/>
-            <!-- Park block -->
-            <rect x="62" y="162" width="76" height="76" fill="#c8d8a0" opacity="0.5" rx="2"/>
-            <rect x="142" y="82"  width="76" height="76" fill="#c8d8a0" opacity="0.4" rx="2"/>
-            <!-- Water body -->
-            <ellipse cx="240" cy="380" rx="52" ry="36" fill="#b8d0e0" opacity="0.55"/>
-            <!-- Heatmap glow blobs -->
-            <ellipse cx="140" cy="200" rx="70" ry="55" fill="#F97316" opacity="0.22" filter="url(#blur1)"/>
-            <ellipse cx="100" cy="160" rx="45" ry="38" fill="#F97316" opacity="0.28" filter="url(#blur1)"/>
-            <ellipse cx="170" cy="240" rx="38" ry="32" fill="#fb923c" opacity="0.22" filter="url(#blur1)"/>
-            <ellipse cx="80"  cy="260" rx="30" ry="25" fill="#c8861a" opacity="0.18" filter="url(#blur1)"/>
-            <ellipse cx="200" cy="180" rx="28" ry="22" fill="#F97316" opacity="0.16" filter="url(#blur1)"/>
-            <defs>
-              <filter id="blur1" x="-60%" y="-60%" width="220%" height="220%">
-                <feGaussianBlur stdDeviation="14"/>
-              </filter>
-            </defs>
-            <!-- Walked path lines -->
-            <path d="M30 420 Q60 380 80 320 Q100 260 130 220 Q160 180 170 140 Q180 100 190 60" stroke="#F97316" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.75"/>
-            <path d="M60 480 Q80 440 100 400 Q120 360 140 320 Q160 280 170 240" stroke="#F97316" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
-            <path d="M140 320 Q160 300 190 280 Q220 260 250 250" stroke="#fb923c" stroke-width="1.8" stroke-linecap="round" opacity="0.5"/>
-            <path d="M170 140 Q190 160 210 180 Q230 200 250 200" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" opacity="0.45"/>
-            <path d="M80 320 Q100 300 120 280 Q150 250 170 240" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
-            <!-- Location pin at hotspot -->
-            <circle cx="130" cy="218" r="7" fill="#F97316"/>
-            <circle cx="130" cy="218" r="4" fill="#faf7f0"/>
-            <!-- Top bar UI -->
-            <rect width="300" height="36" fill="#faf7f0" opacity="0.95"/>
-            <text x="14" y="23" font-family="Georgia,serif" font-size="12" font-weight="bold" fill="#1e1a14">Ayumap</text>
-            <circle cx="276" cy="18" r="10" fill="#F97316" opacity="0.15"/>
-            <text x="272" y="23" font-family="Georgia,serif" font-size="11" fill="#F97316" text-anchor="middle">⊕</text>
-            <!-- Bottom stats bar -->
-            <rect y="444" width="300" height="36" fill="#faf7f0" opacity="0.95"/>
-            <text x="28"  y="466" font-family="Georgia,serif" font-size="9" fill="#4a4032" text-anchor="middle">1,247 km</text>
-            <text x="150" y="466" font-family="Georgia,serif" font-size="9" fill="#4a4032" text-anchor="middle">847 walks</text>
-            <text x="268" y="466" font-family="Georgia,serif" font-size="9" fill="#4a4032" text-anchor="middle">12 countries</text>
-            <line x1="80"  y1="450" x2="80"  y2="476" stroke="#d4c9b5" stroke-width="1"/>
-            <line x1="218" y1="450" x2="218" y2="476" stroke="#d4c9b5" stroke-width="1"/>
-          </svg>
+          <img src="screenshot_website_placeholder.png" alt="Ayumap app screenshot" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
         </div>
       </div>
 
@@ -800,21 +748,33 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
     <div class="screens-row">
       <div class="screen-card">
         <div class="screen-phone">
-          <img src="screenshot_website_placeholder.png" alt="Ayumap heatmap view" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+          <img src="screenshot_website_placeholder.png" alt="Ayumap heatmap" style="width:100%;height:100%;object-fit:cover;border-radius:22px;">
         </div>
         <p class="screen-desc">Personal heatmap</p>
       </div>
       <div class="screen-card">
         <div class="screen-phone">
-          <img src="screenshot_website_placeholder.png" alt="Ayumap journal view" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+          <img src="screenshot_website_placeholder.png" alt="Ayumap journal" style="width:100%;height:100%;object-fit:cover;border-radius:22px;">
         </div>
         <p class="screen-desc">Journey journal</p>
       </div>
       <div class="screen-card">
         <div class="screen-phone">
-          <img src="screenshot_website_placeholder.png" alt="Ayumap world map view" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+          <img src="screenshot_website_placeholder.png" alt="Ayumap world map" style="width:100%;height:100%;object-fit:cover;border-radius:22px;">
         </div>
         <p class="screen-desc">World map</p>
+      </div>
+      <div class="screen-card">
+        <div class="screen-phone">
+          <img src="screenshot_website_placeholder.png" alt="Ayumap record" style="width:100%;height:100%;object-fit:cover;border-radius:22px;">
+        </div>
+        <p class="screen-desc">Record a walk</p>
+      </div>
+      <div class="screen-card">
+        <div class="screen-phone">
+          <img src="screenshot_website_placeholder.png" alt="Ayumap milestones" style="width:100%;height:100%;object-fit:cover;border-radius:22px;">
+        </div>
+        <p class="screen-desc">Milestones</p>
       </div>
     </div>
   </div>
