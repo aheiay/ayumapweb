@@ -60,7 +60,7 @@ body::before {
 /* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 500;
-  padding: calc(8px + env(safe-area-inset-top)) 52px 8px;
+  padding: env(safe-area-inset-top) 52px 0;
   display: flex; justify-content: space-between; align-items: center;
   background: rgba(245,240,232,0.93);
   backdrop-filter: blur(12px);
@@ -535,7 +535,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  nav { padding: calc(15px + env(safe-area-inset-top)) 22px 15px; }
+  nav { padding: env(safe-area-inset-top) 22px 0; }
   .hero, .features-inner, .privacy-section { grid-template-columns: 1fr; gap: 44px; }
   .hero { min-height: unset; padding: 108px 22px 56px; }
   .hero-actions { flex-direction: column; align-items: center; text-align: center; }
