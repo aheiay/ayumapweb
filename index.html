@@ -551,7 +551,10 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 @media (max-width: 900px) {
   nav { padding: calc(3px + env(safe-area-inset-top)) 22px 3px; }
   .hero, .features-inner, .privacy-section { grid-template-columns: 1fr; gap: 44px; }
-  .hero { min-height: unset; padding: 108px 22px 56px; }
+  .hero { min-height: unset; padding: 88px 0 0 0; }
+  .hero-left { padding: 0 22px 32px; }
+  .phone-mockup { height: auto; margin-top: 0; width: 100%; max-width: 100%; }
+  .phone-mockup img { width: 100%; height: auto; }
   .hero-actions { flex-direction: column; align-items: center; text-align: center; }
   .btn-primary, .btn-ghost { width: 100%; text-align: center; justify-content: center; }
   .badge-frame { width: 260px; }
