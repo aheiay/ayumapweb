@@ -92,9 +92,9 @@ nav {
 
 /* ── HERO ── */
 .hero {
-  padding: 130px 52px 72px;
+  padding: 130px 0 0 52px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 72px;
-  align-items: center; max-width: 1200px; margin: 0 auto; min-height: auto;
+  align-items: end; max-width: 1200px; margin: 0 auto; min-height: auto; overflow: hidden;
 }
 .hero-left { opacity: 0; animation: riseIn 0.9s ease 0.15s forwards; }
 
@@ -136,20 +136,21 @@ nav {
 /* ── HERO BADGE ── */
 .hero-right {
   opacity: 0; animation: riseIn 1s ease 0.35s forwards;
-  display: flex; justify-content: center; position: relative;
+  position: relative; overflow: visible; align-self: stretch;
 }
 
 .badge-wrap { position: relative; }
 
 /* Phone mockup */
 .phone-mockup {
-  width: 380px;
+  width: 100%;
   background: transparent;
   border-radius: 0;
   padding: 0;
   box-shadow: none;
-  position: relative;
-  margin-top: -60px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .phone-screen {
@@ -586,14 +587,6 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   .journey-inner { padding: 44px 22px; }
   .journey-grid { grid-template-columns: 1fr; }
 }
-
-.hero-tooltip {
-  position: absolute; top: 20px; left: -20px; z-index: 10;
-  background: var(--rust); color: #fff;
-  font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1rem;
-  line-height: 1.3; padding: 12px 18px; border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(249,115,22,0.3);
-}
 </style>
 </head>
 <body>
@@ -629,8 +622,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 
   <div class="hero-right">
     <div class="badge-wrap">
-      <div class="hero-tooltip">Simple to use.<br>Nothing unnecessary.</div>
-      <!-- Phone mockup with map inside -->
+<!-- Phone mockup with map inside -->
       <div class="phone-mockup">
         <div class="phone-screen">
           <img src="image/screentshot_website_crop.png" alt="Ayumap app screenshot" style="width:100%;height:auto;display:block;">
