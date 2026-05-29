@@ -93,8 +93,8 @@ nav {
 /* ── HERO ── */
 .hero {
   padding: 130px 0 0 80px;
-  display: grid; grid-template-columns: 5fr 4fr; gap: 20px;
-  align-items: end; max-width: 1000px; margin: 0 auto; min-height: auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  align-items: end; max-width: 1200px; margin: 0 auto; min-height: 600px;
 }
 .hero-left { opacity: 0; animation: riseIn 0.9s ease 0.15s forwards; padding-bottom: 72px; }
 
@@ -144,13 +144,21 @@ nav {
 /* Phone mockup */
 .phone-mockup {
   width: 100%;
-  max-width: 700px;
+  max-width: none;
+  height: calc(600px * 0.85);
   background: transparent;
   border-radius: 0;
   padding: 0;
   box-shadow: none;
   position: relative;
   margin-top: -120px;
+  display: flex;
+  align-items: flex-end;
+}
+.phone-mockup img {
+  width: auto;
+  height: 100%;
+  display: block;
 }
 
 .phone-screen {
@@ -317,13 +325,21 @@ nav {
 .screenshots-head { text-align: center; margin-bottom: 56px; }
 
 .screens-row {
-  display: flex; gap: 20px; justify-content: center; align-items: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  justify-items: center;
+}
+@media (max-width: 1100px) {
+  .screens-row { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+  .screens-row { grid-template-columns: repeat(2, 1fr); }
 }
 
 .screen-card {
   display: flex; flex-direction: column; align-items: center; gap: 16px;
-  width: 180px;
+  width: 100%;
 }
 
 .screen-phone {
