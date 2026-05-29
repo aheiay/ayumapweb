@@ -472,6 +472,9 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   color: var(--paper); margin-bottom: 18px; line-height: 1.2;
   white-space: nowrap;
 }
+@media (max-width: 900px) {
+  .name-title { white-space: normal; font-size: clamp(1.1rem, 5.5vw, 2rem); }
+}
 .name-title em { font-style: italic; color: var(--cream); font-weight: 400; }
 .name-body {
   font-family: 'Lora', serif; font-style: italic;
