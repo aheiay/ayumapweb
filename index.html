@@ -143,17 +143,18 @@ nav {
 
 /* Phone mockup */
 .phone-mockup {
-  width: 300px;
+  width: 380px;
   background: transparent;
-  border-radius: 38px;
+  border-radius: 0;
   padding: 0;
   box-shadow: none;
   position: relative;
+  margin-top: -60px;
 }
 
 .phone-screen {
-  border-radius: 30px;
-  overflow: hidden;
+  border-radius: 0;
+  overflow: visible;
   position: relative;
 }
 
@@ -585,6 +586,14 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   .journey-inner { padding: 44px 22px; }
   .journey-grid { grid-template-columns: 1fr; }
 }
+
+.hero-tooltip {
+  position: absolute; top: 20px; left: -20px; z-index: 10;
+  background: var(--rust); color: #fff;
+  font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1rem;
+  line-height: 1.3; padding: 12px 18px; border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(249,115,22,0.3);
+}
 </style>
 </head>
 <body>
@@ -620,14 +629,13 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 
   <div class="hero-right">
     <div class="badge-wrap">
-
+      <div class="hero-tooltip">Simple to use.<br>Nothing unnecessary.</div>
       <!-- Phone mockup with map inside -->
       <div class="phone-mockup">
         <div class="phone-screen">
-          <img src="image/screentshot_website.png" alt="Ayumap app screenshot" style="width:100%;height:auto;display:block;border-radius:inherit;">
+          <img src="image/screentshot_website_crop.png" alt="Ayumap app screenshot" style="width:100%;height:auto;display:block;">
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -734,7 +742,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
     <div class="screens-row">
       <div class="screen-card">
         <div class="screen-phone">
-          <img src="image/screentshot_website.png" alt="Ayumap heatmap" style="width:100%;height:100%;object-fit:cover;border-radius:22px;">
+          <img src="image/screentshot_website_crop.png" alt="Ayumap heatmap" style="width:100%;height:100%;object-fit:cover;border-radius:22px;">
         </div>
         <p class="screen-desc">Personal heatmap</p>
       </div>
