@@ -92,11 +92,11 @@ nav {
 
 /* ── HERO ── */
 .hero {
-  padding: 130px 52px 72px;
+  padding: 130px 0 0 52px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 72px;
-  align-items: center; max-width: 1200px; margin: 0 auto; min-height: auto;
+  align-items: end; max-width: 1200px; margin: 0 auto; min-height: auto;
 }
-.hero-left { opacity: 0; animation: riseIn 0.9s ease 0.15s forwards; }
+.hero-left { opacity: 0; animation: riseIn 0.9s ease 0.15s forwards; padding-bottom: 72px; }
 
 .kicker-row { display: flex; align-items: center; gap: 12px; margin-bottom: 30px; }
 .kicker-dash { width: 32px; height: 2px; background: var(--rust); border-radius: 1px; }
@@ -136,14 +136,15 @@ nav {
 /* ── HERO BADGE ── */
 .hero-right {
   opacity: 0; animation: riseIn 1s ease 0.35s forwards;
-  display: flex; justify-content: center; position: relative;
+  display: flex; justify-content: flex-end; align-items: flex-end; position: relative;
 }
 
 .badge-wrap { position: relative; }
 
 /* Phone mockup */
 .phone-mockup {
-  width: 340px;
+  width: 100%;
+  max-width: 480px;
   background: transparent;
   border-radius: 0;
   padding: 0;
@@ -601,7 +602,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" style="overflow:hidden;">
   <div class="hero-left">
     <div class="kicker-row">
       <span class="kicker-dash"></span>
