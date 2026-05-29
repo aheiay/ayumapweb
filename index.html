@@ -92,9 +92,9 @@ nav {
 
 /* ── HERO ── */
 .hero {
-  padding: 130px 0 0 52px;
+  padding: 130px 52px 72px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 72px;
-  align-items: end; max-width: 1200px; margin: 0 auto; min-height: auto; overflow: hidden;
+  align-items: center; max-width: 1200px; margin: 0 auto; min-height: auto;
 }
 .hero-left { opacity: 0; animation: riseIn 0.9s ease 0.15s forwards; }
 
@@ -136,26 +136,24 @@ nav {
 /* ── HERO BADGE ── */
 .hero-right {
   opacity: 0; animation: riseIn 1s ease 0.35s forwards;
-  position: relative; overflow: visible; align-self: stretch;
+  display: flex; justify-content: center; position: relative;
 }
 
 .badge-wrap { position: relative; }
 
 /* Phone mockup */
 .phone-mockup {
-  width: 100%;
+  width: 340px;
   background: transparent;
   border-radius: 0;
   padding: 0;
   box-shadow: none;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  position: relative;
 }
 
 .phone-screen {
   border-radius: 0;
-  overflow: visible;
+  overflow: hidden;
   position: relative;
 }
 
