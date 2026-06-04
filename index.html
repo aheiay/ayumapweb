@@ -606,6 +606,34 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   .journey-inner { padding: 44px 22px; }
   .journey-grid { grid-template-columns: 1fr; }
 }
+
+.testimonial-section { background: var(--paper-dk); border-top: 1px solid var(--border-md); padding: 72px 0; }
+.testimonial-inner { max-width: 1200px; margin: 0 auto; padding: 0 52px; }
+.testimonial-scroll {
+  display: flex; gap: 20px;
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  padding-bottom: 20px; cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.testimonial-scroll::-webkit-scrollbar { display: none; }
+.t-card {
+  flex: 0 0 320px; scroll-snap-align: start;
+  background: var(--paper-lt); border: 1px solid var(--border-md);
+  border-radius: 20px; padding: 28px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.t-quote { font-family: 'Lora', serif; font-style: italic; font-size: 1.0rem; line-height: 1.78; color: var(--ink-md); flex: 1; }
+.t-quote::before { content: '\201c'; color: var(--rust); font-size: 1.4rem; line-height: 0; vertical-align: -0.3em; margin-right: 2px; }
+.t-author { border-top: 1px solid var(--border); padding-top: 16px; }
+.t-name { font-size: 0.9rem; font-weight: 600; color: var(--ink); margin-bottom: 3px; }
+.t-role { font-size: 0.78rem; color: var(--ink-lt); letter-spacing: 0.04em; }
+.testimonial-scroll-hint { text-align: center; margin-top: 16px; font-size: 0.75rem; color: var(--ink-lt); letter-spacing: 0.08em; }
+@media (max-width: 900px) {
+  .testimonial-inner { padding: 0 22px; }
+  .testimonial-section { padding: 44px 0; }
+  .t-card { flex: 0 0 260px; }
+}
 </style>
 </head>
 <body>
@@ -834,6 +862,43 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   </ul>
 </section>
 
+<!-- TESTIMONIALS -->
+<section class="testimonial-section">
+  <div class="testimonial-inner">
+    <div class="testimonial-head" style="margin-bottom:40px;">
+      <span class="section-kicker">From our users</span>
+      <h2 class="section-title" style="margin-top:10px;">What people are saying</h2>
+    </div>
+    <div class="testimonial-scroll" id="tScroll">
+      <div class="t-card">
+        <p class="t-quote">I&rsquo;m always moving between cities and countries. Ayumap quietly builds my journey map in the background &mdash; when I sit down to edit a video, I can see exactly where I was and when. It&rsquo;s become part of my workflow.</p>
+        <div class="t-author"><div class="t-name">Mia Chen</div><div class="t-role">Travel Vlogger</div></div>
+      </div>
+      <div class="t-card">
+        <p class="t-quote">As someone who films in a new city every week, I used to lose track of everywhere I&rsquo;d been. Ayumap just runs quietly and remembers it all. No feed, no pressure &mdash; exactly what I needed.</p>
+        <div class="t-author"><div class="t-name">James Okafor</div><div class="t-role">Travel Content Creator</div></div>
+      </div>
+      <div class="t-card">
+        <p class="t-quote">I know it&rsquo;s still early days for Ayumap, but it already does exactly what I need &mdash; syncs my walks from Apple Watch, stays out of the way, and lets my phone battery survive a full shoot day. A small app with a clear purpose.</p>
+        <div class="t-author"><div class="t-name">Suki Tanaka</div><div class="t-role">Travel Photographer</div></div>
+      </div>
+      <div class="t-card">
+        <p class="t-quote">I already use dedicated GPS tools for navigation on the trail. Ayumap is different &mdash; it&rsquo;s where all my hikes live over time. A quiet archive, not another sports dashboard.</p>
+        <div class="t-author"><div class="t-name">Lars Eriksson</div><div class="t-role">Long-distance Hiker</div></div>
+      </div>
+      <div class="t-card">
+        <p class="t-quote">It&rsquo;s a young app and you can tell, but honestly that&rsquo;s part of the charm. It&rsquo;s small, light, and does one thing well &mdash; quietly remembering where I&rsquo;ve been. No clutter, no noise. I check it more than I expected.</p>
+        <div class="t-author"><div class="t-name">Sophie Martin</div><div class="t-role">Freelance Designer</div></div>
+      </div>
+      <div class="t-card">
+        <p class="t-quote">My work takes me everywhere. I don&rsquo;t want to post or share &mdash; I just want a private record of every street I&rsquo;ve walked for a story. Ayumap is the only app that understands that.</p>
+        <div class="t-author"><div class="t-name">Daniel Reeves</div><div class="t-role">Travel Journalist</div></div>
+      </div>
+    </div>
+    <p class="testimonial-scroll-hint">SCROLL TO SEE MORE &rarr;</p>
+  </div>
+</section>
+
 <!-- PRICING -->
 <section class="pricing-section" id="pricing">
   <div class="pricing-inner">
@@ -985,6 +1050,17 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
       el.style.transition = 'none';
     });
   }
+})();
+</script>
+<script>
+(function(){
+  var el=document.getElementById('tScroll');
+  if(!el)return;
+  var isDown=false,startX,scrollLeft;
+  el.addEventListener('mousedown',function(e){isDown=true;el.style.cursor='grabbing';startX=e.pageX-el.offsetLeft;scrollLeft=el.scrollLeft;});
+  el.addEventListener('mouseleave',function(){isDown=false;el.style.cursor='grab';});
+  el.addEventListener('mouseup',function(){isDown=false;el.style.cursor='grab';});
+  el.addEventListener('mousemove',function(e){if(!isDown)return;e.preventDefault();var x=e.pageX-el.offsetLeft;el.scrollLeft=scrollLeft-(x-startX)*1.5;});
 })();
 </script>
 </body>
