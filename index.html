@@ -634,6 +634,15 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   .testimonial-section { padding: 44px 0; }
   .t-card { flex: 0 0 260px; }
 }
+
+.t-dots { display: flex; justify-content: center; gap: 10px; margin-top: 20px; }
+.t-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--border-md); border: none; cursor: pointer;
+  padding: 0; transition: background 0.2s, transform 0.2s;
+}
+.t-dot.active { background: var(--rust); transform: scale(1.2); }
+.t-dot:hover { background: var(--rust); }
 </style>
 </head>
 <body>
@@ -895,7 +904,10 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
         <div class="t-author"><div class="t-name">Daniel Reeves</div><div class="t-role">Travel Journalist</div></div>
       </div>
     </div>
-    <p class="testimonial-scroll-hint">SCROLL TO SEE MORE &rarr;</p>
+    <div class="t-dots">
+      <button class="t-dot active" id="tDot0" onclick="tScrollTo(0)" aria-label="Scroll to start"></button>
+      <button class="t-dot" id="tDot1" onclick="tScrollTo(1)" aria-label="Scroll to end"></button>
+    </div>
   </div>
 </section>
 
@@ -1053,14 +1065,30 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 })();
 </script>
 <script>
+function tScrollTo(idx){
+  var el=document.getElementById('tScroll');
+  if(!el)return;
+  if(idx===0){ el.scrollTo({left:0,behavior:'smooth'}); }
+  else { el.scrollTo({left:el.scrollWidth,behavior:'smooth'}); }
+}
 (function(){
   var el=document.getElementById('tScroll');
   if(!el)return;
+  // drag to scroll
   var isDown=false,startX,scrollLeft;
   el.addEventListener('mousedown',function(e){isDown=true;el.style.cursor='grabbing';startX=e.pageX-el.offsetLeft;scrollLeft=el.scrollLeft;});
   el.addEventListener('mouseleave',function(){isDown=false;el.style.cursor='grab';});
   el.addEventListener('mouseup',function(){isDown=false;el.style.cursor='grab';});
   el.addEventListener('mousemove',function(e){if(!isDown)return;e.preventDefault();var x=e.pageX-el.offsetLeft;el.scrollLeft=scrollLeft-(x-startX)*1.5;});
+  // update active dot on scroll
+  el.addEventListener('scroll',function(){
+    var mid=el.scrollLeft+el.clientWidth/2;
+    var half=el.scrollWidth/2;
+    var d0=document.getElementById('tDot0');
+    var d1=document.getElementById('tDot1');
+    if(mid<half){d0.classList.add('active');d1.classList.remove('active');}
+    else{d1.classList.add('active');d0.classList.remove('active');}
+  });
 })();
 </script>
 </body>
