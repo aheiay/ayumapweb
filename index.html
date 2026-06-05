@@ -611,14 +611,14 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 .testimonial-inner { max-width: 1200px; margin: 0 auto; padding: 0 52px; }
 .testimonial-scroll {
   display: flex; gap: 20px;
-  overflow-x: auto; scroll-snap-type: x mandatory;
+  overflow-x: auto;
   padding-bottom: 20px; cursor: grab;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 .testimonial-scroll::-webkit-scrollbar { display: none; }
 .t-card {
-  flex: 0 0 320px; scroll-snap-align: start;
+  flex: 0 0 320px; 
   background: var(--paper-lt); border: 1px solid var(--border-md);
   border-radius: 20px; padding: 28px;
   display: flex; flex-direction: column; gap: 20px;
@@ -1052,48 +1052,32 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 })();
 </script>
 <script>
-window.addEventListener('load', function(){
+(function wait(){
   var el = document.getElementById('tScroll');
-  if(!el) return;
-
+  if(!el || el.scrollWidth <= el.clientWidth + 10){
+    setTimeout(wait, 200); return;
+  }
   var dir = 1;
   var paused = false;
   var resumeTimer;
 
-  // Use setInterval at 30ms for smooth slow scroll
   setInterval(function(){
     if(paused) return;
     el.scrollLeft += dir;
     var max = el.scrollWidth - el.clientWidth;
-    if(el.scrollLeft >= max) { dir = -1; }
-    else if(el.scrollLeft <= 0) { dir = 1; }
-  }, 30);
+    if(el.scrollLeft >= max){ dir = -1; }
+    else if(el.scrollLeft <= 0){ dir = 1; }
+  }, 25);
 
-  function pauseFor(ms){
-    paused = true;
-    clearTimeout(resumeTimer);
-    resumeTimer = setTimeout(function(){ paused = false; }, ms);
-  }
-
-  el.addEventListener('mouseenter', function(){ pauseFor(9999999); });
-  el.addEventListener('mouseleave', function(){ pauseFor(2000); });
-  el.addEventListener('touchstart', function(){ pauseFor(5000); }, {passive:true});
-
-  // drag to scroll
-  var isDown=false,startX,scrollLeft;
-  el.addEventListener('mousedown',function(e){
-    isDown=true; paused=true; clearTimeout(resumeTimer);
-    el.style.cursor='grabbing';
-    startX=e.pageX-el.offsetLeft;
-    scrollLeft=el.scrollLeft;
-  });
-  el.addEventListener('mouseup',function(){ isDown=false; pauseFor(2000); });
-  el.addEventListener('mousemove',function(e){
-    if(!isDown) return;
-    e.preventDefault();
-    el.scrollLeft = scrollLeft-(e.pageX-el.offsetLeft-startX)*1.5;
-  });
-});
+  function pauseFor(ms){ paused=true; clearTimeout(resumeTimer); resumeTimer=setTimeout(function(){paused=false;},ms); }
+  el.addEventListener('mouseenter',function(){pauseFor(99999);});
+  el.addEventListener('mouseleave',function(){pauseFor(1500);});
+  el.addEventListener('touchstart',function(){pauseFor(5000);},{passive:true});
+  var isDown=false,startX,sl;
+  el.addEventListener('mousedown',function(e){isDown=true;paused=true;clearTimeout(resumeTimer);el.style.cursor='grabbing';startX=e.pageX-el.offsetLeft;sl=el.scrollLeft;});
+  el.addEventListener('mouseup',function(){isDown=false;el.style.cursor='grab';pauseFor(2000);});
+  el.addEventListener('mousemove',function(e){if(!isDown)return;e.preventDefault();el.scrollLeft=sl-(e.pageX-el.offsetLeft-startX)*1.5;});
+})();
 </script>
 </body>
 </html>
