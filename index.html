@@ -608,6 +608,18 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 }
 
 .testimonial-section { background: var(--paper-dk); border-top: 1px solid var(--border-md); padding: 72px 0; }
+.testimonial-inner { position: relative; }
+.testimonial-inner::before, .testimonial-inner::after {
+  content: "";
+  position: absolute; top: 0; width: 80px; height: 100%;
+  z-index: 2; pointer-events: none;
+}
+.testimonial-inner::before { left: 52px; background: linear-gradient(to right, var(--paper-dk), transparent); }
+.testimonial-inner::after { right: 52px; background: linear-gradient(to left, var(--paper-dk), transparent); }
+@media (max-width: 900px) {
+  .testimonial-inner::before { left: 22px; }
+  .testimonial-inner::after { right: 22px; }
+}
 .testimonial-inner { max-width: 1200px; margin: 0 auto; padding: 0 52px; }
 .testimonial-scroll {
   display: flex; gap: 20px;
@@ -1071,7 +1083,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 
   function pauseFor(ms){ paused=true; clearTimeout(resumeTimer); resumeTimer=setTimeout(function(){paused=false;},ms); }
   el.addEventListener('mouseenter',function(){pauseFor(99999);});
-  el.addEventListener('mouseleave',function(){pauseFor(1500);});
+  el.addEventListener('mouseleave',function(){paused=false;clearTimeout(resumeTimer);});
   el.addEventListener('touchstart',function(){pauseFor(5000);},{passive:true});
   var isDown=false,startX,sl;
   el.addEventListener('mousedown',function(e){isDown=true;paused=true;clearTimeout(resumeTimer);el.style.cursor='grabbing';startX=e.pageX-el.offsetLeft;sl=el.scrollLeft;});
