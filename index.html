@@ -608,21 +608,13 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 }
 
 .testimonial-section { background: var(--paper-dk); border-top: 1px solid var(--border-md); padding: 72px 0; }
-.t-scroll-wrap {
-  position: relative;
-}
-.t-scroll-wrap::before, .t-scroll-wrap::after {
-  content: "";
-  position: absolute; top: 0; width: 80px; height: 100%;
-  z-index: 2; pointer-events: none;
-}
-.t-scroll-wrap::before { left: 0; background: linear-gradient(to right, var(--paper-dk), transparent); }
-.t-scroll-wrap::after { right: 0; background: linear-gradient(to left, var(--paper-dk), transparent); }
+.t-scroll-wrap { position: relative; }
 .testimonial-inner { max-width: 1200px; margin: 0 auto; padding: 0 52px; }
 .testimonial-scroll {
   display: flex; gap: 20px;
   overflow-x: auto;
-  padding-bottom: 20px; cursor: grab;
+  padding: 0 52px 20px;
+  cursor: grab;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
