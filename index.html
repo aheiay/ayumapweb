@@ -650,6 +650,72 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 .t-scroll-wrap::before { left: 0; background: linear-gradient(to right, var(--paper-dk) 0%, transparent 100%); }
 .t-scroll-wrap::after { right: 0; background: linear-gradient(to left, var(--paper-dk) 0%, transparent 100%); }
 .testimonial-scroll::-webkit-scrollbar { display: none; }
+
+/* NOT THAT SECTION */
+.not-that-section {
+  background: var(--paper);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 24px;
+}
+.not-that-inner {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.not-that-kicker {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-lt);
+  margin-bottom: 16px;
+}
+.not-that-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+.not-that-title em {
+  font-style: italic;
+  color: var(--rust);
+}
+.not-that-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+}
+.not-that-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.not-that-x {
+  font-size: 1rem;
+  color: var(--ink-lt);
+  opacity: 0.4;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.not-that-item strong {
+  font-family: 'Karla', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 4px;
+}
+.not-that-item p {
+  font-family: 'Lora', serif;
+  font-size: 0.88rem;
+  color: var(--ink-lt);
+  line-height: 1.6;
+  margin: 0;
+}
+
 </style>
 </head>
 <body>
@@ -670,10 +736,10 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   <div class="hero-left">
     <div class="kicker-row">
       <span class="kicker-dash"></span>
-      <span class="kicker-text">iOS App — Coming Soon</span>
+      <span class="kicker-text">iOS App — Free Download</span>
     </div>
     <h1 class="hero-title">Your journeys,<br><em>Only yours.</em></h1>
-    <p class="hero-body">A private walking memory map for people who want to remember meaningful journeys — without social pressure, performance tracking, or digital noise.</p>
+    <p class="hero-body">A private walking memory map. Your walks and hikes quietly accumulate into a personal heatmap — a calm archive of where life happened, only yours.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="https://apps.apple.com/gb/app/ayumap-walk-journey-map/id6772994220" target="_blank" rel="noopener">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -696,16 +762,126 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 </section>
 
 
-<!-- PULL QUOTE -->
-<div class="pull-section">
-  <p class="pull-quote">"The map itself becomes the memory archive — a quiet accumulation of <em>where life happened.</em>"</p>
-  <p class="pull-attr">— The map is the history</p>
+<!-- NOT THAT BLOCK -->
+<div class="not-that-section">
+  <div class="not-that-inner">
+    <p class="not-that-kicker">Before you read on</p>
+    <h2 class="not-that-title">Not a sports app.<br><em>Not a social platform.</em></h2>
+    <div class="not-that-grid">
+      <div class="not-that-item">
+        <span class="not-that-x">✕</span>
+        <div>
+          <strong>No followers, no feed</strong>
+          <p>There is no social layer. No one sees your map unless you choose to share it.</p>
+        </div>
+      </div>
+      <div class="not-that-item">
+        <span class="not-that-x">✕</span>
+        <div>
+          <strong>No streaks, no pressure</strong>
+          <p>Ayumap never asks you to record every day. Missing a week changes nothing.</p>
+        </div>
+      </div>
+      <div class="not-that-item">
+        <span class="not-that-x">✕</span>
+        <div>
+          <strong>No performance tracking</strong>
+          <p>No pace targets, no calorie counts, no activity rings. Just the places you've been.</p>
+        </div>
+      </div>
+      <div class="not-that-item">
+        <span class="not-that-x">✕</span>
+        <div>
+          <strong>No push to share</strong>
+          <p>The app is private by default. Sharing is always your choice, never the point.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- SCREENSHOTS -->
+<section class="screenshots-section">
+  <div class="screenshots-inner">
+    <div class="screenshots-head">
+      <span class="badges-kicker">App screenshots</span>
+      <h2 class="badges-title">A calm, personal experience.</h2>
+      <p class="badges-sub">Every screen is designed to feel quiet and reflective — never noisy, never demanding.</p>
+    </div>
+
+    <div class="screens-row">
+      <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_1.png" alt="Ayumap heatmap view showing accumulated walk and hike routes" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
+      <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_2.png" alt="Ayumap journal view showing past walks and travel memories" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
+      <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_3.png" alt="Ayumap route detail view showing a recorded hike path" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
+      <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_4.png" alt="Ayumap map view showing travel history across cities" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
+      <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_5.png" alt="Ayumap private walking memory app on iPhone" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
+      <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_6.png" alt="Ayumap GPX import and hike route history" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <div class="features-inner">
+    <div>
+      <div class="section-num" style="color:rgba(30,26,20,0.07);margin-bottom:18px;font-size:4rem;">01</div>
+      <h2 class="features-title">Simple to use.<br><em>Nothing unnecessary.</em></h2>
+      <p class="features-dek">Whether it is a travel memory, a mountain trail, a familiar walk near home, or a city exploration — Ayumap quietly collects it all. Import once, record going forward, revisit whenever.</p>
+      <div class="feat-label">What's included</div>
+      <ul class="feat-list">
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Personal heatmap</strong>Every path you've ever walked, on a map. One country free — upgrade to unlock the whole world.</div></li>
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Apple Health sync</strong>Import past walks automatically from Health. No manual work needed.</div></li>
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>GPX import</strong>Bring in data from Komoot, AllTrails, Garmin, or Strava.</div></li>
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Quiet background recorder</strong>Meaningful walks only. Short trips filtered out automatically.</div></li>
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Memory journal</strong>Distance, elevation, time, and your own notes for every journey. Last 30 days free; upgrade for full history.</div></li>
+        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>iCloud sync</strong>Everything syncs privately across your devices. No server sees your data.</div></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- JOURNEY SOURCES -->
+<section class="journey-section">
+  <div class="journey-inner">
+    <div class="section-head">
+      <div class="section-num">02</div>
+      <div>
+        <h2 class="section-title">Not a tracking app.<br><em style="font-family:Georgia,serif;color:var(--rust);">A memory map.</em></h2>
+        <p class="section-dek">Ayumap is designed to sit quietly alongside the tools you already use. Your Apple Watch, Apple Health, Garmin, or Strava — they handle the tracking. Ayumap handles the remembering.</p>
+      </div>
+    </div>
+    <div class="journey-grid">
+      <div class="journey-card">
+        <div class="journey-icon">⌚</div>
+        <div class="journey-body">
+          <strong>Apple Watch</strong>
+          <p>When you record a walk or hike with Apple Watch, Ayumap picks it up automatically. No tapping, no setup. Runs, commutes, and daily errands are intentionally ignored — only meaningful journeys make it to your map.</p>
+        </div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-icon">📁</div>
+        <div class="journey-body">
+          <strong>GPX &amp; FIT import</strong>
+          <p>Bring in routes from Komoot, AllTrails, Garmin, or Strava. A journey recorded anywhere can become part of your personal map.</p>
+        </div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-icon">⏺</div>
+        <div class="journey-body">
+          <strong>In-app recorder</strong>
+          <p>For moments when you don't have your Watch — a quiet fallback. Start it, walk, forget it's running. The path will be there when you're done.</p>
+        </div>
+      </div>
+    </div>
+    <p class="journey-footer">However the journey was recorded, it ends up in the same place — your map.</p>
+  </div>
+</section>
 
 <!-- PHILOSOPHY -->
 <section class="philosophy" id="features">
   <div class="section-head">
-    <div class="section-num">01</div>
+    <div class="section-num">03</div>
     <div>
       <h2 class="section-hed">Why Ayumap is <em>different.</em></h2>
       <p class="section-dek">Most walking and fitness apps feel overwhelming — too many features, too much sharing, too much noise. Ayumap is designed to feel private, calm, simple, and reflective.</p>
@@ -784,89 +960,10 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   </div>
 </section>
 
-<!-- MILESTONES -->
-<!-- SCREENSHOTS -->
-<section class="screenshots-section">
-  <div class="screenshots-inner">
-    <div class="screenshots-head">
-      <span class="badges-kicker">App screenshots</span>
-      <h2 class="badges-title">A calm, personal experience.</h2>
-      <p class="badges-sub">Every screen is designed to feel quiet and reflective — never noisy, never demanding.</p>
-    </div>
-
-    <div class="screens-row">
-      <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_1.png" alt="Ayumap heatmap view showing accumulated walk and hike routes" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
-      <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_2.png" alt="Ayumap journal view showing past walks and travel memories" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
-      <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_3.png" alt="Ayumap route detail view showing a recorded hike path" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
-      <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_4.png" alt="Ayumap map view showing travel history across cities" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
-      <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_5.png" alt="Ayumap private walking memory app on iPhone" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
-      <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_6.png" alt="Ayumap GPX import and hike route history" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features-section">
-  <div class="features-inner">
-    <div>
-      <div class="section-num" style="color:rgba(30,26,20,0.07);margin-bottom:18px;font-size:4rem;">02</div>
-      <h2 class="features-title">Simple to use.<br><em>Nothing unnecessary.</em></h2>
-      <p class="features-dek">Whether it is a travel memory, a mountain trail, a familiar walk near home, or a city exploration — Ayumap quietly collects it all. Import once, record going forward, revisit whenever.</p>
-      <div class="feat-label">What's included</div>
-      <ul class="feat-list">
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Personal heatmap</strong>Your chosen country shows every path you've ever walked — no time limit on the map. Upgrade to unlock the whole world.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Apple Health sync</strong>Import past walks automatically from Health. No manual work needed.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>GPX import</strong>Bring in data from Komoot, AllTrails, Garmin, or Strava.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Quiet background recorder</strong>Walks and meaningful journeys only. Short unimportant trips filtered out automatically.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Memory journal</strong>A private space for each walk — distance, elevation, time, and your own notes. Free plan shows the last 30 days; upgrade for full history.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>iCloud sync</strong>Everything syncs privately across your devices. No server sees your data.</div></li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<!-- JOURNEY SOURCES -->
-<section class="journey-section">
-  <div class="journey-inner">
-    <div class="section-head">
-      <div class="section-num">03</div>
-      <div>
-        <h2 class="section-title">Not a tracking app.<br><em style="font-family:Georgia,serif;color:var(--rust);">A memory map.</em></h2>
-        <p class="section-dek">Ayumap is designed to sit quietly alongside the tools you already use. Your Apple Watch, Apple Health, Garmin, or Strava — they handle the tracking. Ayumap handles the remembering.</p>
-      </div>
-    </div>
-    <div class="journey-grid">
-      <div class="journey-card">
-        <div class="journey-icon">⌚</div>
-        <div class="journey-body">
-          <strong>Apple Watch</strong>
-          <p>When you record a walk or hike with Apple Watch, Ayumap picks it up automatically. No tapping, no setup. Runs, commutes, and daily errands are intentionally ignored — only meaningful journeys make it to your map.</p>
-        </div>
-      </div>
-      <div class="journey-card">
-        <div class="journey-icon">📁</div>
-        <div class="journey-body">
-          <strong>GPX &amp; FIT import</strong>
-          <p>Bring in routes from Komoot, AllTrails, Garmin, or Strava. A journey recorded anywhere can become part of your personal map.</p>
-        </div>
-      </div>
-      <div class="journey-card">
-        <div class="journey-icon">⏺</div>
-        <div class="journey-body">
-          <strong>In-app recorder</strong>
-          <p>For moments when you don't have your Watch — a quiet fallback. Start it, walk, forget it's running. The path will be there when you're done.</p>
-        </div>
-      </div>
-    </div>
-    <p class="journey-footer">However the journey was recorded, it ends up in the same place — your map.</p>
-  </div>
-</section>
-
 <!-- PRIVACY -->
 <section class="privacy-section" id="privacy">
   <div>
-    <div class="section-num" style="color:rgba(30,26,20,0.08);margin-bottom:14px;font-size:4rem;">03</div>
+    <div class="section-num" style="color:rgba(30,26,20,0.08);margin-bottom:14px;font-size:4rem;">04</div>
     <h2 class="priv-title">Private inside.<br><em>Shareable outside.</em></h2>
     <p class="priv-dek">Sign in with Apple ID — nothing extra to create or remember. Your journeys live in your own private iCloud container, a quiet archive only you can access.</p>
   </div>
@@ -923,6 +1020,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
       <span style="font-size:1.1rem;">&#xF8FF;</span> Free Download
     </a>
     <p style="margin-top:14px;font-family:'Lora',serif;font-style:italic;font-size:0.9rem;color:var(--ink-lt);">Free to download. Upgrade inside the app.</p>
+    <p style="margin-top:8px;font-family:'Karla',sans-serif;font-size:0.8rem;color:var(--ink-lt);opacity:0.7;">🔒 Your data stays on your device. Backed up privately via iCloud.</p>
   </div>
   </div>
 </section>
