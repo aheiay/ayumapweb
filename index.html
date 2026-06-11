@@ -588,6 +588,12 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 }
 
 /* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  .not-that-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .not-that-grid { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 900px) {
   nav { padding: calc(3px + env(safe-area-inset-top)) 22px 3px; }
   .hero, .features-inner, .privacy-section { grid-template-columns: 1fr; gap: 44px; }
@@ -685,7 +691,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 }
 .not-that-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
 .not-that-item {
