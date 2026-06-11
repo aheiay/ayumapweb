@@ -306,31 +306,41 @@ nav {
 
 /* ── FEATURES ── */
 .features-section { background: var(--forest-deep); border-top: 1px solid rgba(23,58,46,0.4); padding: 72px 52px; }
-.features-inner {
-  max-width: 1200px; margin: 0 auto;
-  display: block; max-width: 700px;
-}
+.features-inner { max-width: 1000px; margin: 0 auto; }
+.features-header { text-align: center; margin-bottom: 52px; }
 .features-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.8rem, 3vw, 2.8rem); line-height: 1.2; font-weight: 700;
-  color: var(--paper); margin-bottom: 14px;
+  color: var(--paper); margin-bottom: 0;
 }
 .features-title em { font-style: italic; color: var(--rust-lt); font-weight: 400; }
-.features-dek {
-  font-family: 'Lora', serif; font-size: 1.08rem; line-height: 1.78; color: rgba(245,240,232,0.6); margin-bottom: 42px;
+.feat-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
-.feat-label {
-  font-size: 0.66rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--rust-lt); margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid rgba(245,240,232,0.15);
+@media (max-width: 680px) {
+  .feat-cards { grid-template-columns: 1fr; }
+  .features-section { padding: 52px 22px; }
 }
-.feat-list { list-style: none; }
-.feat-item {
-  display: grid; grid-template-columns: 16px 1fr; gap: 13px;
-  padding: 14px 0; border-bottom: 1px solid rgba(245,240,232,0.08);
+.feat-card {
+  background: rgba(245,240,232,0.05);
+  border: 1px solid rgba(245,240,232,0.1);
+  border-radius: 20px;
+  padding: 36px 28px;
 }
-.feat-check { color: var(--rust-lt); font-size: 0.76rem; margin-top: 2px; }
-.feat-text { font-size: 0.97rem; line-height: 1.5; color: rgba(245,240,232,0.6); }
-.feat-text strong { color: var(--paper); font-weight: 500; display: block; margin-bottom: 1px; }
+.feat-card-icon { font-size: 2rem; margin-bottom: 18px; }
+.feat-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem; font-weight: 700;
+  color: var(--paper); margin-bottom: 10px; line-height: 1.3;
+}
+.feat-card-body {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem; line-height: 1.7;
+  color: rgba(245,240,232,0.55);
+  margin: 0;
+}
 
 .tabs-col { display: flex; flex-direction: column; gap: 2px; }
 .tab-row {
@@ -765,6 +775,32 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 </section>
 
 
+<!-- FEATURES -->
+<section class="features-section">
+  <div class="features-inner">
+    <div class="features-header">
+      <h2 class="features-title">A quiet place<br><em>for your journeys.</em></h2>
+    </div>
+    <div class="feat-cards">
+      <div class="feat-card">
+        <div class="feat-card-icon">🗺</div>
+        <h3 class="feat-card-title">Your walks become a map</h3>
+        <p class="feat-card-body">Every walk and hike quietly builds your personal heatmap. No tapping, no setup.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-card-icon">📖</div>
+        <h3 class="feat-card-title">A place to remember</h3>
+        <p class="feat-card-body">Each journey becomes a memory — distance, elevation, your notes, all in one quiet place.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-card-icon">☁️</div>
+        <h3 class="feat-card-title">Yours, only yours</h3>
+        <p class="feat-card-body">Everything stays in your private iCloud. No server, no strangers, no feed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- NOT THAT BLOCK -->
 <div class="not-that-section">
   <div class="not-that-inner">
@@ -820,27 +856,6 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
       <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_5.png" alt="Ayumap private walking memory app on iPhone" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
       <div class="screen-card"><div class="screen-phone"><img src="image/screentshot_6.png" alt="Ayumap GPX import and hike route history" style="width:100%;height:auto;display:block;border-radius:22px;"></div></div>
     </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features-section">
-  <div class="features-inner">
-    <div>
-      <div class="section-num" style="color:rgba(30,26,20,0.07);margin-bottom:18px;font-size:4rem;">01</div>
-      <h2 class="features-title">Simple to use.<br><em>Nothing unnecessary.</em></h2>
-      <p class="features-dek">Whether it is a travel memory, a mountain trail, a familiar walk near home, or a city exploration — Ayumap quietly collects it all. Import once, record going forward, revisit whenever.</p>
-      <div class="feat-label">What's included</div>
-      <ul class="feat-list">
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Personal heatmap</strong>Every path you've ever walked, on a map. One country free — upgrade to unlock the whole world.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Apple Health sync</strong>Import past walks automatically from Health. No manual work needed.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>GPX import</strong>Bring in data from Komoot, AllTrails, Garmin, or Strava.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Quiet background recorder</strong>Meaningful walks only. Short trips filtered out automatically.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>Memory journal</strong>Distance, elevation, time, and your own notes for every journey. Last 30 days free; upgrade for full history.</div></li>
-        <li class="feat-item"><span class="feat-check">✓</span><div class="feat-text"><strong>iCloud sync</strong>Everything syncs privately across your devices. No server sees your data.</div></li>
-      </ul>
-    </div>
-
   </div>
 </section>
 
