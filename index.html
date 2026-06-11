@@ -305,15 +305,19 @@ nav {
 .c-body { font-size: 0.96rem; line-height: 1.65; color: var(--ink-md); }
 
 /* ── FEATURES ── */
-.features-section { background: var(--rust); border-top: none; padding: 40px 52px; }
+.features-section { background: var(--rust); border-top: none; padding: 28px 52px; }
 .features-inner { max-width: 860px; margin: 0 auto; }
-.features-header { margin-bottom: 24px; }
+.features-header { margin-bottom: 20px; }
 .features-title {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.8rem, 2.8vw, 2.6rem); line-height: 1.2; font-weight: 700;
-  color: #fff; margin-bottom: 0;
+  font-size: clamp(1.4rem, 2.2vw, 2rem); line-height: 1.2; font-weight: 700;
+  color: #fff; margin-bottom: 0; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
 }
 .features-title em { font-style: italic; color: rgba(255,255,255,0.75); font-weight: 400; }
+.features-num {
+  font-size: clamp(1.4rem, 2.2vw, 2rem); font-weight: 700;
+  color: rgba(255,255,255,0.3); letter-spacing: -0.02em; flex-shrink: 0;
+}
 .feat-stack { border-top: 1px solid rgba(255,255,255,0.25); }
 .feat-row {
   padding: 16px 0;
@@ -763,8 +767,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 <section class="features-section">
   <div class="features-inner">
     <div class="features-header">
-      <span style="font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:700;line-height:1;color:rgba(255,255,255,0.15);letter-spacing:-0.04em;margin-bottom:20px;display:block;">01</span>
-      <h2 class="features-title">A quiet place<br><em>for your journeys.</em></h2>
+      <h2 class="features-title"><span class="features-num">01</span> A quiet place <em>for your journeys.</em></h2>
     </div>
     <div class="feat-stack">
       <div class="feat-row">
