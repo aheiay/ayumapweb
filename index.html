@@ -717,6 +717,21 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   margin: 0;
 }
 
+
+/* HERO TAGLINES */
+.hero-taglines {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 18px 0 24px;
+}
+.hero-taglines span {
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--ink-lt);
+  line-height: 1.5;
+}
 </style>
 </head>
 <body>
@@ -741,6 +756,11 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
     </div>
     <h1 class="hero-title">Your journeys,<br><em>Only yours.</em></h1>
     <p class="hero-body">A private walking memory map. Your walks and hikes quietly accumulate into a personal heatmap — a calm archive of where life happened, only yours.</p>
+    <div class="hero-taglines">
+      <span>Your walks become a map.</span>
+      <span>A place to remember.</span>
+      <span>Yours, only yours.</span>
+    </div>
     <div class="hero-actions">
       <a class="btn-primary" href="https://apps.apple.com/gb/app/ayumap-walk-journey-map/id6772994220" target="_blank" rel="noopener">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -763,33 +783,10 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 </section>
 
 
-<!-- FEATURES -->
-<section class="features-section">
-  <div class="features-inner">
-    <div class="features-header">
-      <h2 class="features-title"><span class="features-num">01</span> A quiet place <em>for your journeys.</em></h2>
-    </div>
-    <div class="feat-stack">
-      <div class="feat-row">
-        <h3 class="feat-row-title">Your walks become a map</h3>
-        <p class="feat-row-body">Every walk and hike quietly builds your personal heatmap. No tapping, no setup.</p>
-      </div>
-      <div class="feat-row">
-        <h3 class="feat-row-title">A place to remember</h3>
-        <p class="feat-row-body">Each journey becomes a memory — distance, elevation, your notes, all in one quiet place.</p>
-      </div>
-      <div class="feat-row">
-        <h3 class="feat-row-title">Yours, only yours</h3>
-        <p class="feat-row-body">Everything stays in your private iCloud. No server, no strangers, no feed.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- NOT THAT BLOCK -->
 <div class="not-that-section">
   <div class="not-that-inner">
-    <span style="font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:700;line-height:1;color:rgba(30,26,20,0.07);letter-spacing:-0.04em;margin-bottom:20px;display:block;">02</span>
+    <span style="font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:700;line-height:1;color:rgba(30,26,20,0.07);letter-spacing:-0.04em;margin-bottom:20px;display:block;">01</span>
     <p class="not-that-kicker">Before you read on</p>
     <h2 class="not-that-title">Not a sports app.<br><em>Not a social platform.</em></h2>
     <div class="not-that-grid">
@@ -829,7 +826,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 <section class="screenshots-section">
   <div class="screenshots-inner">
     <div class="screenshots-head">
-      <span style="font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:700;line-height:1;color:rgba(30,26,20,0.07);letter-spacing:-0.04em;margin-bottom:20px;display:block;">03</span>
+      <span style="font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:700;line-height:1;color:rgba(30,26,20,0.07);letter-spacing:-0.04em;margin-bottom:20px;display:block;">02</span>
       <span class="badges-kicker">App screenshots</span>
       <h2 class="badges-title">A calm, personal experience.</h2>
       <p class="badges-sub">Every screen is designed to feel quiet and reflective — never noisy, never demanding.</p>
@@ -850,7 +847,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 <section class="journey-section">
   <div class="journey-inner">
     <div class="section-head">
-      <div class="section-num">04</div>
+      <div class="section-num">03</div>
       <div>
         <h2 class="section-title">Not a tracking app.<br><em style="font-family:Georgia,serif;color:var(--rust);">A memory map.</em></h2>
         <p class="section-dek">Ayumap is designed to sit quietly alongside the tools you already use. Your Apple Watch, Apple Health, Garmin, or Strava — they handle the tracking. Ayumap handles the remembering.</p>
@@ -886,7 +883,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 <!-- PHILOSOPHY -->
 <section class="philosophy" id="features">
   <div class="section-head">
-    <div class="section-num">05</div>
+    <div class="section-num">04</div>
     <div>
       <h2 class="section-hed">Why Ayumap is <em>different.</em></h2>
       <p class="section-dek">Most walking and fitness apps feel overwhelming — too many features, too much sharing, too much noise. Ayumap is designed to feel private, calm, simple, and reflective.</p>
@@ -968,7 +965,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 <!-- PRIVACY -->
 <section class="privacy-section" id="privacy">
   <div>
-    <div class="section-num" style="color:rgba(30,26,20,0.08);margin-bottom:14px;font-size:4rem;">06</div>
+    <div class="section-num" style="color:rgba(30,26,20,0.08);margin-bottom:14px;font-size:4rem;">05</div>
     <h2 class="priv-title">Private inside.<br><em>Shareable outside.</em></h2>
     <p class="priv-dek">Sign in with Apple ID — nothing extra to create or remember. Your journeys live in your own private iCloud container, a quiet archive only you can access.</p>
   </div>
