@@ -651,9 +651,9 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 
 /* NOT THAT SECTION */
 .not-that-section {
-  background: var(--paper);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  background: var(--rust);
+  border-top: none;
+  border-bottom: none;
   padding: 52px 24px;
 }
 .not-that-inner {
@@ -666,20 +666,20 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ink-lt);
+  color: rgba(255,255,255,0.6);
   margin-bottom: 16px;
 }
 .not-that-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 700;
-  color: var(--ink);
+  color: #fff;
   line-height: 1.2;
   margin-bottom: 40px;
 }
 .not-that-title em {
   font-style: italic;
-  color: var(--rust);
+  color: rgba(255,255,255,0.75);
 }
 .not-that-grid {
   display: grid;
@@ -696,8 +696,7 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 }
 .not-that-x {
   font-size: 1rem;
-  color: var(--ink-lt);
-  opacity: 0.4;
+  color: rgba(255,255,255,0.4);
   margin-top: 2px;
   flex-shrink: 0;
 }
@@ -705,14 +704,14 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
   font-family: 'Karla', sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--ink);
+  color: #fff;
   display: block;
   margin-bottom: 4px;
 }
 .not-that-item p {
   font-family: 'Lora', serif;
   font-size: 0.88rem;
-  color: var(--ink-lt);
+  color: rgba(255,255,255,0.65);
   line-height: 1.6;
   margin: 0;
 }
@@ -722,15 +721,16 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 .hero-taglines {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0;
   margin: 18px 0 24px;
 }
 .hero-taglines span {
-  font-family: 'Lora', serif;
-  font-size: 1.05rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-style: italic;
-  color: var(--ink-lt);
-  line-height: 1.5;
+  font-weight: 700;
+  color: var(--rust);
+  line-height: 1.4;
 }
 </style>
 </head>
