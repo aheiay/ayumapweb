@@ -306,26 +306,32 @@ nav {
 
 /* ── FEATURES ── */
 .features-section { background: var(--forest-deep); border-top: 1px solid rgba(23,58,46,0.4); padding: 52px 52px; }
-.features-inner {
-  max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: 2fr 3fr; gap: 76px; align-items: center;
-}
+.features-inner { max-width: 860px; margin: 0 auto; }
+.features-header { margin-bottom: 40px; }
 .features-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.8rem, 2.8vw, 2.6rem); line-height: 1.2; font-weight: 700;
   color: var(--paper); margin-bottom: 0;
 }
 .features-title em { font-style: italic; color: var(--rust-lt); font-weight: 400; }
-.feat-points { list-style: none; }
-.fp {
-  display: flex; gap: 16px; padding: 18px 0;
-  border-bottom: 1px solid rgba(245,240,232,0.1); align-items: flex-start;
+.feat-stack { border-top: 1px solid rgba(245,240,232,0.12); }
+.feat-row {
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(245,240,232,0.12);
 }
-.fp:first-child { border-top: 1px solid rgba(245,240,232,0.1); }
-.fp-text { font-size: 0.97rem; line-height: 1.6; color: rgba(245,240,232,0.55); }
-.fp-text strong { color: var(--paper); font-weight: 600; display: block; margin-bottom: 2px; }
+.feat-row-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 700; color: var(--paper);
+  margin-bottom: 8px; line-height: 1.2;
+}
+.feat-row-body {
+  font-family: 'Lora', serif;
+  font-size: 0.97rem; line-height: 1.7;
+  color: rgba(245,240,232,0.5);
+  margin: 0;
+}
 @media (max-width: 900px) {
-  .features-inner { grid-template-columns: 1fr; gap: 32px; }
   .features-section { padding: 44px 22px; }
 }
 
