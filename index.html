@@ -305,44 +305,35 @@ nav {
 .c-body { font-size: 0.96rem; line-height: 1.65; color: var(--ink-md); }
 
 /* ── FEATURES ── */
-.features-section { background: var(--forest-deep); border-top: 1px solid rgba(23,58,46,0.4); padding: 52px 52px; }
+.features-section { background: var(--rust); border-top: none; padding: 52px 52px; }
 .features-inner { max-width: 860px; margin: 0 auto; }
 .features-header { margin-bottom: 40px; }
 .features-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.8rem, 2.8vw, 2.6rem); line-height: 1.2; font-weight: 700;
-  color: var(--paper); margin-bottom: 0;
+  color: #fff; margin-bottom: 0;
 }
-.features-title em { font-style: italic; color: var(--rust-lt); font-weight: 400; }
-.feat-stack { border-top: 1px solid rgba(245,240,232,0.12); }
+.features-title em { font-style: italic; color: rgba(255,255,255,0.75); font-weight: 400; }
+.feat-stack { border-top: 1px solid rgba(255,255,255,0.25); }
 .feat-row {
   padding: 28px 0;
-  border-bottom: 1px solid rgba(245,240,232,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
 }
 .feat-row-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.3rem, 2.2vw, 1.8rem);
-  font-weight: 700; color: var(--paper);
+  font-weight: 700; color: #fff;
   margin-bottom: 8px; line-height: 1.2;
 }
 .feat-row-body {
   font-family: 'Lora', serif;
   font-size: 0.97rem; line-height: 1.7;
-  color: rgba(245,240,232,0.5);
+  color: rgba(255,255,255,0.7);
   margin: 0;
 }
 @media (max-width: 900px) {
   .features-section { padding: 44px 22px; }
 }
-
-.tabs-col { display: flex; flex-direction: column; gap: 2px; }
-.tab-row {
-  background: rgba(245,240,232,0.05); border: 1px solid rgba(245,240,232,0.1);
-  border-radius: 4px; padding: 18px 20px; transition: background 0.2s;
-}
-.tab-row:hover { background: rgba(245,240,232,0.09); }
-.tab-title { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--paper); margin-bottom: 4px; }
-.tab-body { font-size: 0.92rem; color: rgba(245,240,232,0.45); line-height: 1.55; }
 
 /* ── BADGES ── */
 .badges-section {
@@ -772,21 +763,21 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 <section class="features-section">
   <div class="features-inner">
     <div class="features-header">
-      <span style="font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:700;line-height:1;color:rgba(245,240,232,0.07);letter-spacing:-0.04em;margin-bottom:20px;display:block;">01</span>
+      <span style="font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:700;line-height:1;color:rgba(255,255,255,0.15);letter-spacing:-0.04em;margin-bottom:20px;display:block;">01</span>
       <h2 class="features-title">A quiet place<br><em>for your journeys.</em></h2>
     </div>
-    <div class="feat-cards">
-      <div class="feat-card">
-<h3 class="feat-card-title">Your walks become a map</h3>
-        <p class="feat-card-body">Every walk and hike quietly builds your personal heatmap. No tapping, no setup.</p>
+    <div class="feat-stack">
+      <div class="feat-row">
+        <h3 class="feat-row-title">Your walks become a map</h3>
+        <p class="feat-row-body">Every walk and hike quietly builds your personal heatmap. No tapping, no setup.</p>
       </div>
-      <div class="feat-card">
-<h3 class="feat-card-title">A place to remember</h3>
-        <p class="feat-card-body">Each journey becomes a memory — distance, elevation, your notes, all in one quiet place.</p>
+      <div class="feat-row">
+        <h3 class="feat-row-title">A place to remember</h3>
+        <p class="feat-row-body">Each journey becomes a memory — distance, elevation, your notes, all in one quiet place.</p>
       </div>
-      <div class="feat-card">
-<h3 class="feat-card-title">Yours, only yours</h3>
-        <p class="feat-card-body">Everything stays in your private iCloud. No server, no strangers, no feed.</p>
+      <div class="feat-row">
+        <h3 class="feat-row-title">Yours, only yours</h3>
+        <p class="feat-row-body">Everything stays in your private iCloud. No server, no strangers, no feed.</p>
       </div>
     </div>
   </div>
