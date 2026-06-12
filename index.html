@@ -107,7 +107,7 @@ nav {
 }
 .nav-inner {
   max-width: 1200px; margin: 0 auto;
-  padding: 0 0 0 55px;
+  padding: 0 0 0 60px;
   display: flex; justify-content: space-between; align-items: center;
 }
 .nav-logo {
@@ -591,7 +591,8 @@ footer { background: var(--forest-deep-dk); color: var(--cream); padding: 60px 5
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  nav { padding: calc(3px + env(safe-area-inset-top)) 22px 3px; }
+  nav { padding: calc(3px + env(safe-area-inset-top)) 0 3px; }
+  .nav-inner { padding: 0 22px; }
   .hero, .features-inner, .privacy-section { grid-template-columns: 1fr; gap: 44px; }
   .hero { min-height: unset; padding: 88px 0 0 0; }
   .hero-left { padding: 0 22px 32px; }
